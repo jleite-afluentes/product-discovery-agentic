@@ -2,7 +2,7 @@
 
 Proposta conceitual 0.1 — 17 de outubro de 2026.
 
-Registro histórico anterior ao grilling. A [especificação confirmada](especificacao_aprovada.md) e o [pacote implementado](../package/README.md) têm precedência sobre propostas ou situações de instalação descritas aqui.
+Registro conceitual anterior ao grilling. O [pacote implementado](../package/README.md) e seu [catálogo de métodos](../package/skills/pd-methods/references/methods.json) têm precedência sobre esta proposta. Os registros históricos de iniciativas permanecem locais e não são distribuídos aqui.
 
 O objetivo é transformar uma demanda em uma decisão de produto sustentada por evidências: investir, experimentar, reformular, adiar ou abandonar. A orquestração organiza o trabalho de agentes e pessoas, mantém a origem dos achados e permite revisar decisões quando novas evidências surgem.
 
@@ -86,7 +86,7 @@ Para análise de causas, técnicas como 5 Porquês, diagrama de causa e efeito e
 
 A referência inicial para “100 frameworks e metodologias” é o catálogo de *Universal Methods of Design* já presente no projeto. A [lista original publicada em Design Research Methods](https://designresearchmethods.com/universal-methods-of-design-100/) reúne 100 métodos. Eles compõem um repertório de seleção, sem obrigação de aplicar todos em cada discovery.
 
-O [catálogo local anterior](../old_version/docs/methods/universal_methods_agent_matrix.md) será reutilizado como inventário. Seus responsáveis e números de fase precisam ser remapeados para esta arquitetura antes de uso operacional. Frameworks adicionais de problem solving terão identificação própria para preservar a composição desse catálogo.
+O [catálogo de métodos do pacote](../package/skills/pd-methods/references/methods.json) mantém a lista e as avaliações operacionais. Frameworks adicionais de problem solving terão identificação própria para preservar a composição desse catálogo.
 
 Cada método deverá ter uma ficha com: identificador e fonte; pergunta atendida; entradas necessárias; procedimento; artefato de saída; recursos e participantes; limitações; critérios de conclusão; e modalidade de execução, distinguindo análise automatizável, facilitação humana e coleta com participantes.
 
