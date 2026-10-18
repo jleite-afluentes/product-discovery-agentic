@@ -1,0 +1,15 @@
+{
+  "title": "Papel a representar",
+  "persona_type": "stakeholder_proxy",
+  "refs": [
+    "SOURCE-ID"
+  ],
+  "known_goals": [],
+  "responsibilities": [],
+  "decision_authority": [],
+  "reported_behaviors": [],
+  "hypotheses": [],
+  "unknowns": [
+    "Informações que alteram a representação e precisam de pergunta"
+  ]
+}

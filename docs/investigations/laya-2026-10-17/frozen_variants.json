@@ -1,0 +1,184 @@
+[
+  {
+    "name": "baseline",
+    "labels": [
+      "pm",
+      "research",
+      "ba",
+      "ux",
+      "feasibility",
+      "reviewer",
+      "rfp",
+      "personas",
+      "documentation",
+      "presentations",
+      "abstain"
+    ],
+    "desc": [
+      "Conectar estratégia, transformação digital, produtos digitais e IA a valor, riscos e resultados verificáveis.",
+      "Investigar fontes recuperáveis, preparar coleta humana e sintetizar evidências sem inventar observações.",
+      "Modelar processos, regras, requisitos, dados e rastreabilidade.",
+      "Analisar tarefas, jornadas, interação, acessibilidade e experiências de serviço.",
+      "Investigar integrações, arquitetura, migração, segurança, custos e falhas de soluções com IA.",
+      "Confrontar fontes e critérios; emitir findings sem alterar o trabalho avaliado.",
+      "Compor RFP para intake de squad agêntica, sem criar regras de negócio novas.",
+      "Construir e consultar perspectivas sintéticas limitadas ao contexto autorizado do projeto.",
+      "Escrever documentação executiva, comercial e técnica com referências por afirmação.",
+      "Produzir decks executivos e técnicos com vínculo entre slides e artefatos.",
+      "Ambíguo, múltiplos domínios sem uma tarefa principal, aprovação humana ou fora do domínio."
+    ],
+    "ins": "Select the specialist responsible for the MAIN discovery task. If unclear or asking approval, abstain."
+  },
+  {
+    "name": "pt_instruction_only",
+    "labels": [
+      "pm",
+      "research",
+      "ba",
+      "ux",
+      "feasibility",
+      "reviewer",
+      "rfp",
+      "personas",
+      "documentation",
+      "presentations",
+      "abstain"
+    ],
+    "desc": [
+      "Conectar estratégia, transformação digital, produtos digitais e IA a valor, riscos e resultados verificáveis.",
+      "Investigar fontes recuperáveis, preparar coleta humana e sintetizar evidências sem inventar observações.",
+      "Modelar processos, regras, requisitos, dados e rastreabilidade.",
+      "Analisar tarefas, jornadas, interação, acessibilidade e experiências de serviço.",
+      "Investigar integrações, arquitetura, migração, segurança, custos e falhas de soluções com IA.",
+      "Confrontar fontes e critérios; emitir findings sem alterar o trabalho avaliado.",
+      "Compor RFP para intake de squad agêntica, sem criar regras de negócio novas.",
+      "Construir e consultar perspectivas sintéticas limitadas ao contexto autorizado do projeto.",
+      "Escrever documentação executiva, comercial e técnica com referências por afirmação.",
+      "Produzir decks executivos e técnicos com vínculo entre slides e artefatos.",
+      "Ambíguo, múltiplos domínios sem uma tarefa principal, aprovação humana ou fora do domínio."
+    ],
+    "ins": "Selecione o especialista responsável pela tarefa principal de discovery. Se o pedido for vago, exigir aprovação humana ou estiver fora do domínio, escolha Abster-se."
+  },
+  {
+    "name": "pt_short",
+    "labels": [
+      "Gestão de produto",
+      "Pesquisa",
+      "Análise de negócio",
+      "Experiência do usuário",
+      "Viabilidade técnica",
+      "Revisão independente",
+      "RFP",
+      "Personas",
+      "Documentação",
+      "Apresentações",
+      "Abster-se"
+    ],
+    "desc": [
+      "Estratégia, objetivos de negócio, valor e priorização de oportunidades.",
+      "Busca de fontes e evidências; planejamento de entrevistas e coleta.",
+      "Processos, regras de negócio, requisitos e critérios de aceite.",
+      "Jornadas, fluxos de interação, usabilidade e acessibilidade.",
+      "Arquitetura, APIs, integrações, dados, segurança e custos técnicos.",
+      "Auditoria e avaliação independente de qualidade; apontar inconsistências.",
+      "Composição da solicitação de proposta e pacote de intake para desenvolvimento.",
+      "Criação e consulta de perfis sintéticos de pessoas com fontes e lacunas.",
+      "Redação de documentos, manuais e relatórios executivos ou técnicos.",
+      "Criação de slides e apresentações executivas ou técnicas.",
+      "Pedido vago, tarefas sem prioridade, aprovação humana ou assunto fora de discovery."
+    ],
+    "ins": "Selecione o especialista responsável pela tarefa principal de discovery. Se o pedido for vago, exigir aprovação humana ou estiver fora do domínio, escolha Abster-se."
+  },
+  {
+    "name": "en_short_pt_input",
+    "labels": [
+      "Product management",
+      "Research",
+      "Business analysis",
+      "User experience",
+      "Technical feasibility",
+      "Independent review",
+      "RFP",
+      "Personas",
+      "Documentation",
+      "Presentations",
+      "Abstain"
+    ],
+    "desc": [
+      "Strategy, business goals, value and opportunity prioritization.",
+      "Find sources and evidence; plan interviews and data collection.",
+      "Processes, business rules, requirements and acceptance criteria.",
+      "Journeys, interaction flows, usability and accessibility.",
+      "Architecture, APIs, integrations, data, security and technical costs.",
+      "Independent quality audit and review; report inconsistencies.",
+      "Compose a request for proposal and development intake package.",
+      "Create and consult synthetic person profiles with sources and gaps.",
+      "Write documents, manuals and executive or technical reports.",
+      "Create slides and executive or technical presentations.",
+      "Vague request, unprioritized tasks, human approval or out-of-domain topic."
+    ],
+    "ins": "Select the specialist responsible for the MAIN discovery task. If unclear or asking approval, abstain."
+  },
+  {
+    "name": "pt_short_json",
+    "labels": [
+      "Gestão de produto",
+      "Pesquisa",
+      "Análise de negócio",
+      "Experiência do usuário",
+      "Viabilidade técnica",
+      "Revisão independente",
+      "RFP",
+      "Personas",
+      "Documentação",
+      "Apresentações",
+      "Abster-se"
+    ],
+    "desc": [
+      "Estratégia, objetivos de negócio, valor e priorização de oportunidades.",
+      "Busca de fontes e evidências; planejamento de entrevistas e coleta.",
+      "Processos, regras de negócio, requisitos e critérios de aceite.",
+      "Jornadas, fluxos de interação, usabilidade e acessibilidade.",
+      "Arquitetura, APIs, integrações, dados, segurança e custos técnicos.",
+      "Auditoria e avaliação independente de qualidade; apontar inconsistências.",
+      "Composição da solicitação de proposta e pacote de intake para desenvolvimento.",
+      "Criação e consulta de perfis sintéticos de pessoas com fontes e lacunas.",
+      "Redação de documentos, manuais e relatórios executivos ou técnicos.",
+      "Criação de slides e apresentações executivas ou técnicas.",
+      "Pedido vago, tarefas sem prioridade, aprovação humana ou assunto fora de discovery."
+    ],
+    "ins": "Selecione o especialista responsável pela tarefa principal de discovery. Se o pedido for vago, exigir aprovação humana ou estiver fora do domínio, escolha Abster-se.",
+    "json": true
+  },
+  {
+    "name": "pt_hierarchy",
+    "labels": [
+      "Gestão de produto",
+      "Pesquisa",
+      "Análise de negócio",
+      "Experiência do usuário",
+      "Viabilidade técnica",
+      "Revisão independente",
+      "RFP",
+      "Personas",
+      "Documentação",
+      "Apresentações",
+      "Abster-se"
+    ],
+    "desc": [
+      "Estratégia, objetivos de negócio, valor e priorização de oportunidades.",
+      "Busca de fontes e evidências; planejamento de entrevistas e coleta.",
+      "Processos, regras de negócio, requisitos e critérios de aceite.",
+      "Jornadas, fluxos de interação, usabilidade e acessibilidade.",
+      "Arquitetura, APIs, integrações, dados, segurança e custos técnicos.",
+      "Auditoria e avaliação independente de qualidade; apontar inconsistências.",
+      "Composição da solicitação de proposta e pacote de intake para desenvolvimento.",
+      "Criação e consulta de perfis sintéticos de pessoas com fontes e lacunas.",
+      "Redação de documentos, manuais e relatórios executivos ou técnicos.",
+      "Criação de slides e apresentações executivas ou técnicas.",
+      "Pedido vago, tarefas sem prioridade, aprovação humana ou assunto fora de discovery."
+    ],
+    "ins": "Selecione o especialista responsável pela tarefa principal de discovery. Se o pedido for vago, exigir aprovação humana ou estiver fora do domínio, escolha Abster-se.",
+    "hierarchy": true
+  }
+]

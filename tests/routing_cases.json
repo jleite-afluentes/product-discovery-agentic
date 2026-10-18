@@ -1,0 +1,14 @@
+[
+  {"text":"Definir objetivos de negócio e priorizar oportunidades do produto.","expected":"pm"},
+  {"text":"Pesquisar fontes primárias e preparar um roteiro de entrevistas com participantes.","expected":"research"},
+  {"text":"Modelar regras de negócio e critérios de aceite dos requisitos.","expected":"ba"},
+  {"text":"Mapear a jornada e o fluxo de interação do usuário com foco em acessibilidade.","expected":"ux"},
+  {"text":"Avaliar arquitetura, isolamento entre tenants, migração de dados e integração com APIs.","expected":"feasibility"},
+  {"text":"Revisar independentemente a consistência da especificação e emitir findings.","expected":"reviewer"},
+  {"text":"Consolidar a RFP e preparar o pacote de handoff para a squad.","expected":"rfp"},
+  {"text":"Construir a ficha de uma persona sintética com suas fontes e lacunas.","expected":"personas"},
+  {"text":"Escrever a documentação técnica com referências às decisões e aos artefatos.","expected":"documentation"},
+  {"text":"Preparar um slide deck executivo em PowerPoint para apresentar a proposta.","expected":"presentations"},
+  {"text":"Aprovar o gate e aumentar o orçamento do projeto.","expected":"abstain"},
+  {"text":"Preciso de ajuda com tudo.","expected":"abstain"}
+]

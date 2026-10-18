@@ -1,0 +1,4 @@
+interface:
+  display_name: "Revisão independente"
+  short_description: "Discovery com evidência e rastreabilidade"
+  default_prompt: "Use $pd-quality-review no projeto indicado e registre suas contribuições."

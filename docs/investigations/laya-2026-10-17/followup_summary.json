@@ -1,0 +1,605 @@
+[
+  {
+    "variant": "baseline_reversed",
+    "original_correct": 5,
+    "paraphrase_correct": 6,
+    "mean_ms": 127.8,
+    "truncations": 0,
+    "errors": [
+      {
+        "id": "original-1",
+        "expected": "pm",
+        "actual": "presentations",
+        "score": 0.3104,
+        "margin": 0.14900000000000002
+      },
+      {
+        "id": "original-3",
+        "expected": "ba",
+        "actual": "presentations",
+        "score": 0.3731,
+        "margin": 0.2158
+      },
+      {
+        "id": "original-4",
+        "expected": "ux",
+        "actual": "presentations",
+        "score": 0.4344,
+        "margin": 0.27490000000000003
+      },
+      {
+        "id": "original-5",
+        "expected": "feasibility",
+        "actual": "presentations",
+        "score": 0.2232,
+        "margin": 0.027600000000000013
+      },
+      {
+        "id": "original-6",
+        "expected": "reviewer",
+        "actual": "presentations",
+        "score": 0.3389,
+        "margin": 0.16349999999999998
+      },
+      {
+        "id": "original-11",
+        "expected": "abstain",
+        "actual": "rfp",
+        "score": 0.919,
+        "margin": 0.902
+      },
+      {
+        "id": "original-12",
+        "expected": "abstain",
+        "actual": "presentations",
+        "score": 0.3161,
+        "margin": 0.1378
+      },
+      {
+        "id": "paraphrase-1",
+        "expected": "pm",
+        "actual": "presentations",
+        "score": 0.4991,
+        "margin": 0.3832
+      },
+      {
+        "id": "paraphrase-3",
+        "expected": "ba",
+        "actual": "rfp",
+        "score": 0.4692,
+        "margin": 0.13219999999999998
+      },
+      {
+        "id": "paraphrase-4",
+        "expected": "ux",
+        "actual": "presentations",
+        "score": 0.3348,
+        "margin": 0.1382
+      },
+      {
+        "id": "paraphrase-6",
+        "expected": "reviewer",
+        "actual": "abstain",
+        "score": 0.3433,
+        "margin": 0.1804
+      },
+      {
+        "id": "paraphrase-8",
+        "expected": "personas",
+        "actual": "rfp",
+        "score": 0.2715,
+        "margin": 0.09600000000000003
+      },
+      {
+        "id": "paraphrase-9",
+        "expected": "documentation",
+        "actual": "presentations",
+        "score": 0.7159,
+        "margin": 0.5967
+      },
+      {
+        "id": "paraphrase-11",
+        "expected": "abstain",
+        "actual": "rfp",
+        "score": 0.4312,
+        "margin": 0.29380000000000006
+      },
+      {
+        "id": "paraphrase-12",
+        "expected": "abstain",
+        "actual": "presentations",
+        "score": 0.2939,
+        "margin": 0.06539999999999999
+      },
+      {
+        "id": "paraphrase-13",
+        "expected": "abstain",
+        "actual": "presentations",
+        "score": 0.1989,
+        "margin": 0.0315
+      },
+      {
+        "id": "paraphrase-16",
+        "expected": "reviewer",
+        "actual": "presentations",
+        "score": 0.787,
+        "margin": 0.7228
+      }
+    ],
+    "changed_predictions": 9,
+    "diagnostic_08_coverage": 0.14285714285714285,
+    "diagnostic_08_precision": 0.75,
+    "accepted_n": 4,
+    "accepted_errors": [
+      "original-11"
+    ]
+  },
+  {
+    "variant": "baseline_rotate_by_3",
+    "original_correct": 4,
+    "paraphrase_correct": 7,
+    "mean_ms": 119.9,
+    "truncations": 0,
+    "errors": [
+      {
+        "id": "original-1",
+        "expected": "pm",
+        "actual": "presentations",
+        "score": 0.2484,
+        "margin": 0.0824
+      },
+      {
+        "id": "original-3",
+        "expected": "ba",
+        "actual": "presentations",
+        "score": 0.2891,
+        "margin": 0.15230000000000002
+      },
+      {
+        "id": "original-4",
+        "expected": "ux",
+        "actual": "presentations",
+        "score": 0.325,
+        "margin": 0.16440000000000002
+      },
+      {
+        "id": "original-5",
+        "expected": "feasibility",
+        "actual": "research",
+        "score": 0.2361,
+        "margin": 0.0849
+      },
+      {
+        "id": "original-6",
+        "expected": "reviewer",
+        "actual": "research",
+        "score": 0.2263,
+        "margin": 0.0826
+      },
+      {
+        "id": "original-10",
+        "expected": "presentations",
+        "actual": "rfp",
+        "score": 0.607,
+        "margin": 0.4206
+      },
+      {
+        "id": "original-11",
+        "expected": "abstain",
+        "actual": "rfp",
+        "score": 0.8016,
+        "margin": 0.7613
+      },
+      {
+        "id": "original-12",
+        "expected": "abstain",
+        "actual": "presentations",
+        "score": 0.2717,
+        "margin": 0.10749999999999998
+      },
+      {
+        "id": "paraphrase-1",
+        "expected": "pm",
+        "actual": "presentations",
+        "score": 0.267,
+        "margin": 0.08910000000000001
+      },
+      {
+        "id": "paraphrase-3",
+        "expected": "ba",
+        "actual": "feasibility",
+        "score": 0.173,
+        "margin": 0.011699999999999988
+      },
+      {
+        "id": "paraphrase-4",
+        "expected": "ux",
+        "actual": "presentations",
+        "score": 0.3051,
+        "margin": 0.17279999999999998
+      },
+      {
+        "id": "paraphrase-6",
+        "expected": "reviewer",
+        "actual": "ux",
+        "score": 0.1612,
+        "margin": 0.011400000000000021
+      },
+      {
+        "id": "paraphrase-8",
+        "expected": "personas",
+        "actual": "presentations",
+        "score": 0.1778,
+        "margin": 0.012900000000000023
+      },
+      {
+        "id": "paraphrase-9",
+        "expected": "documentation",
+        "actual": "presentations",
+        "score": 0.5828,
+        "margin": 0.36419999999999997
+      },
+      {
+        "id": "paraphrase-11",
+        "expected": "abstain",
+        "actual": "feasibility",
+        "score": 0.2939,
+        "margin": 0.129
+      },
+      {
+        "id": "paraphrase-12",
+        "expected": "abstain",
+        "actual": "presentations",
+        "score": 0.2553,
+        "margin": 0.15080000000000005
+      },
+      {
+        "id": "paraphrase-16",
+        "expected": "reviewer",
+        "actual": "presentations",
+        "score": 0.4328,
+        "margin": 0.24850000000000003
+      }
+    ],
+    "changed_predictions": 7,
+    "diagnostic_08_coverage": 0.14285714285714285,
+    "diagnostic_08_precision": 0.75,
+    "accepted_n": 4,
+    "accepted_errors": [
+      "original-11"
+    ]
+  },
+  {
+    "variant": "pt_short_reversed",
+    "original_correct": 7,
+    "paraphrase_correct": 8,
+    "mean_ms": 125.3,
+    "truncations": 0,
+    "errors": [
+      {
+        "id": "original-1",
+        "expected": "pm",
+        "actual": "rfp",
+        "score": 0.3345,
+        "margin": 0.08950000000000002
+      },
+      {
+        "id": "original-4",
+        "expected": "ux",
+        "actual": "presentations",
+        "score": 0.2077,
+        "margin": 0.046499999999999986
+      },
+      {
+        "id": "original-5",
+        "expected": "feasibility",
+        "actual": "ba",
+        "score": 0.3326,
+        "margin": 0.18460000000000001
+      },
+      {
+        "id": "original-11",
+        "expected": "abstain",
+        "actual": "rfp",
+        "score": 0.2869,
+        "margin": 0.06939999999999999
+      },
+      {
+        "id": "original-12",
+        "expected": "abstain",
+        "actual": "ba",
+        "score": 0.2389,
+        "margin": 0.0822
+      },
+      {
+        "id": "paraphrase-3",
+        "expected": "ba",
+        "actual": "abstain",
+        "score": 0.4541,
+        "margin": 0.25980000000000003
+      },
+      {
+        "id": "paraphrase-4",
+        "expected": "ux",
+        "actual": "rfp",
+        "score": 0.2635,
+        "margin": 0.040600000000000025
+      },
+      {
+        "id": "paraphrase-6",
+        "expected": "reviewer",
+        "actual": "abstain",
+        "score": 0.3234,
+        "margin": 0.15000000000000002
+      },
+      {
+        "id": "paraphrase-11",
+        "expected": "abstain",
+        "actual": "ba",
+        "score": 0.2526,
+        "margin": 0.0764
+      },
+      {
+        "id": "paraphrase-12",
+        "expected": "abstain",
+        "actual": "pm",
+        "score": 0.234,
+        "margin": 0.08250000000000002
+      },
+      {
+        "id": "paraphrase-13",
+        "expected": "abstain",
+        "actual": "ux",
+        "score": 0.3376,
+        "margin": 0.04510000000000003
+      },
+      {
+        "id": "paraphrase-14",
+        "expected": "abstain",
+        "actual": "feasibility",
+        "score": 0.4559,
+        "margin": 0.262
+      },
+      {
+        "id": "paraphrase-16",
+        "expected": "reviewer",
+        "actual": "presentations",
+        "score": 0.4582,
+        "margin": 0.0368
+      }
+    ],
+    "changed_predictions": 11,
+    "diagnostic_08_coverage": 0.17857142857142858,
+    "diagnostic_08_precision": 1.0,
+    "accepted_n": 5,
+    "accepted_errors": []
+  },
+  {
+    "variant": "pt_short_rotate_by_3",
+    "original_correct": 8,
+    "paraphrase_correct": 9,
+    "mean_ms": 130.8,
+    "truncations": 0,
+    "errors": [
+      {
+        "id": "original-3",
+        "expected": "ba",
+        "actual": "presentations",
+        "score": 0.2092,
+        "margin": 0.014999999999999986
+      },
+      {
+        "id": "original-4",
+        "expected": "ux",
+        "actual": "abstain",
+        "score": 0.3509,
+        "margin": 0.07050000000000001
+      },
+      {
+        "id": "original-5",
+        "expected": "feasibility",
+        "actual": "rfp",
+        "score": 0.2009,
+        "margin": 0.06609999999999999
+      },
+      {
+        "id": "original-9",
+        "expected": "documentation",
+        "actual": "feasibility",
+        "score": 0.4668,
+        "margin": 0.3332
+      },
+      {
+        "id": "paraphrase-3",
+        "expected": "ba",
+        "actual": "rfp",
+        "score": 0.2493,
+        "margin": 0.08729999999999999
+      },
+      {
+        "id": "paraphrase-6",
+        "expected": "reviewer",
+        "actual": "ux",
+        "score": 0.4285,
+        "margin": 0.09999999999999998
+      },
+      {
+        "id": "paraphrase-12",
+        "expected": "abstain",
+        "actual": "pm",
+        "score": 0.3616,
+        "margin": 0.23759999999999998
+      },
+      {
+        "id": "paraphrase-13",
+        "expected": "abstain",
+        "actual": "ux",
+        "score": 0.3501,
+        "margin": 0.11690000000000003
+      },
+      {
+        "id": "paraphrase-14",
+        "expected": "abstain",
+        "actual": "personas",
+        "score": 0.2843,
+        "margin": 0.02729999999999999
+      },
+      {
+        "id": "paraphrase-15",
+        "expected": "documentation",
+        "actual": "feasibility",
+        "score": 0.2259,
+        "margin": 0.037599999999999995
+      },
+      {
+        "id": "paraphrase-16",
+        "expected": "reviewer",
+        "actual": "presentations",
+        "score": 0.5432,
+        "margin": 0.254
+      }
+    ],
+    "changed_predictions": 8,
+    "diagnostic_08_coverage": 0.21428571428571427,
+    "diagnostic_08_precision": 1.0,
+    "accepted_n": 6,
+    "accepted_errors": []
+  },
+  {
+    "variant": "ovr_binary_pt",
+    "original_correct": 4,
+    "paraphrase_correct": 7,
+    "mean_ms": 241.1,
+    "truncations": 0,
+    "errors": [
+      {
+        "id": "original-3",
+        "expected": "ba",
+        "actual": "rfp",
+        "score": 0.6376,
+        "margin": 0.11229999999999996
+      },
+      {
+        "id": "original-4",
+        "expected": "ux",
+        "actual": "presentations",
+        "score": 0.5936,
+        "margin": 0.006700000000000039
+      },
+      {
+        "id": "original-5",
+        "expected": "feasibility",
+        "actual": "abstain",
+        "score": 0.4534,
+        "margin": 0.03620000000000001
+      },
+      {
+        "id": "original-6",
+        "expected": "reviewer",
+        "actual": "abstain",
+        "score": 0.4685,
+        "margin": 0.20350000000000001
+      },
+      {
+        "id": "original-7",
+        "expected": "rfp",
+        "actual": "presentations",
+        "score": 0.9536,
+        "margin": 0.04930000000000001
+      },
+      {
+        "id": "original-9",
+        "expected": "documentation",
+        "actual": "abstain",
+        "score": 0.4874,
+        "margin": 0.08579999999999999
+      },
+      {
+        "id": "original-11",
+        "expected": "abstain",
+        "actual": "rfp",
+        "score": 0.889,
+        "margin": 0.06930000000000003
+      },
+      {
+        "id": "original-12",
+        "expected": "abstain",
+        "actual": "personas",
+        "score": 0.5544,
+        "margin": 0.1508
+      },
+      {
+        "id": "paraphrase-1",
+        "expected": "pm",
+        "actual": "rfp",
+        "score": 0.8656,
+        "margin": 0.013000000000000012
+      },
+      {
+        "id": "paraphrase-4",
+        "expected": "ux",
+        "actual": "rfp",
+        "score": 0.5982,
+        "margin": 0.0020000000000000018
+      },
+      {
+        "id": "paraphrase-5",
+        "expected": "feasibility",
+        "actual": "reviewer",
+        "score": 0.9774,
+        "margin": 0.006900000000000017
+      },
+      {
+        "id": "paraphrase-10",
+        "expected": "presentations",
+        "actual": "rfp",
+        "score": 0.7589,
+        "margin": 0.05190000000000006
+      },
+      {
+        "id": "paraphrase-11",
+        "expected": "abstain",
+        "actual": "rfp",
+        "score": 0.7705,
+        "margin": 0.16999999999999993
+      },
+      {
+        "id": "paraphrase-12",
+        "expected": "abstain",
+        "actual": "rfp",
+        "score": 0.7365,
+        "margin": 0.025000000000000022
+      },
+      {
+        "id": "paraphrase-13",
+        "expected": "abstain",
+        "actual": "feasibility",
+        "score": 0.5733,
+        "margin": 0.017299999999999982
+      },
+      {
+        "id": "paraphrase-14",
+        "expected": "abstain",
+        "actual": "ux",
+        "score": 0.5687,
+        "margin": 0.3678
+      },
+      {
+        "id": "paraphrase-15",
+        "expected": "documentation",
+        "actual": "presentations",
+        "score": 0.7588,
+        "margin": 0.19169999999999998
+      }
+    ],
+    "diagnostic_08_coverage": 0.25,
+    "diagnostic_08_precision": 0.42857142857142855,
+    "accepted_n": 7,
+    "accepted_errors": [
+      "original-7",
+      "original-11",
+      "paraphrase-1",
+      "paraphrase-5"
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Composição da RFP"
+  short_description: "Discovery com evidência e rastreabilidade"
+  default_prompt: "Use $pd-rfp no projeto indicado e registre suas contribuições."

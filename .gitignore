@@ -1,0 +1,14 @@
+.runtime/
+__pycache__/
+*.pyc
+.DS_Store
+dist/
+projects/
+old_version/
+docs/validation/
+docs/especificacao_aprovada.md
+docs/skills_e_plugins.md
+**/local-runtime.json
+**/install-local.json
+.env
+.env.*

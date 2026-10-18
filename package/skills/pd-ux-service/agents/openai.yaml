@@ -1,0 +1,4 @@
+interface:
+  display_name: "UX e serviço"
+  short_description: "Discovery com evidência e rastreabilidade"
+  default_prompt: "Use $pd-ux-service no projeto indicado e registre suas contribuições."

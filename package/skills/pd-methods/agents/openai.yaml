@@ -1,0 +1,4 @@
+interface:
+  display_name: "Métodos de discovery"
+  short_description: "Selecionar técnicas por decisão e gate"
+  default_prompt: "Use $pd-methods para recomendar métodos adequados à decisão do projeto."

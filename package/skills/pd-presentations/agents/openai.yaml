@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apresentações"
+  short_description: "Discovery com evidência e rastreabilidade"
+  default_prompt: "Use $pd-presentations no projeto indicado e registre suas contribuições."

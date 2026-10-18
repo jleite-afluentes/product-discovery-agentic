@@ -1,0 +1,94 @@
+{
+  "version": "0.2.1",
+  "gates": [
+    {
+      "id": "G0",
+      "title": "Mandato e contexto",
+      "required_tags": [
+        "mandate"
+      ],
+      "criteria": [
+        "Problema, decisão pretendida, owner, escopo inicial, atores e restrições explícitos.",
+        "Hipóteses e lacunas distinguidas de fatos."
+      ]
+    },
+    {
+      "id": "G1",
+      "title": "Problema e evidências",
+      "required_tags": [
+        "problem",
+        "evidence"
+      ],
+      "criteria": [
+        "Achados ligados a fontes originais recuperáveis e suas limitações.",
+        "Causas presumidas separadas de sintomas e evidências contrárias expostas."
+      ]
+    },
+    {
+      "id": "G2",
+      "title": "Oportunidades e alternativas",
+      "required_tags": [
+        "opportunities",
+        "alternatives"
+      ],
+      "criteria": [
+        "Oportunidades vinculadas ao problema e ao resultado esperado.",
+        "Alternativas comparadas, incluindo manter a situação atual quando aplicável."
+      ]
+    },
+    {
+      "id": "G3",
+      "title": "Solução e viabilidade",
+      "required_tags": [
+        "solution",
+        "validation",
+        "feasibility"
+      ],
+      "criteria": [
+        "Hipóteses críticas têm evidência de avaliação ou pendência humana explícita.",
+        "Valor, usabilidade, viabilidade, integrações e riscos de IA avaliados no escopo necessário."
+      ]
+    },
+    {
+      "id": "G4",
+      "title": "Especificação",
+      "required_tags": [
+        "requirements",
+        "traceability"
+      ],
+      "criteria": [
+        "Processos, regras, jornadas, requisitos e aceite ligados às fontes e decisões.",
+        "Lacunas classificadas por impacto; regras e compromissos confirmados por humano."
+      ]
+    },
+    {
+      "id": "G5",
+      "title": "RFP e prontidão para intake",
+      "required_tags": [
+        "rfp",
+        "readiness"
+      ],
+      "criteria": [
+        "RFP coerente com especificação e prioridades; pendências têm owner e condição de resolução.",
+        "Pacote permite à squad questionar e planejar o desenvolvimento; handoff aceito ainda não é exigido."
+      ]
+    },
+    {
+      "id": "G6",
+      "title": "Aceite do handoff",
+      "required_tags": [
+        "handoff_acceptance"
+      ],
+      "criteria": [
+        "Após G5, destinatário recebeu versões e referências; dúvidas e responsabilidades registradas.",
+        "Aceite real do destinatário consta nas fontes; owner confirma a passagem."
+      ]
+    }
+  ],
+  "delegated_decisions": [
+    "organize_evidence",
+    "choose_template",
+    "select_preapproved_method"
+  ],
+  "rule": "Alterações de regras, escopo, compromissos externos, investimento e gates exigem humano."
+}

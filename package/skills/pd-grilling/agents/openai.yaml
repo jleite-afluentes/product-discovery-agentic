@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grilling de discovery"
+  short_description: "Rodadas coordenadas para decisões de produto"
+  default_prompt: "Use $pd-grilling para esclarecer as decisões pendentes do projeto."

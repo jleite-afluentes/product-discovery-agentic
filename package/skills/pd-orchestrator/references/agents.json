@@ -1,0 +1,156 @@
+{
+  "version": "0.2.1",
+  "agents": {
+    "orchestrator": {
+      "title": "Orquestrador",
+      "skill": "pd-orchestrator",
+      "purpose": "Coordenar estado, gates, grilling e rotas. Não aprovar gates.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "task-routing",
+        "context-packaging"
+      ],
+      "can_approve_gate": false,
+      "authority": "execute"
+    },
+    "pm": {
+      "title": "Product Manager",
+      "skill": "pd-product-management",
+      "purpose": "Conectar estratégia, transformação digital, produtos digitais e IA a valor, riscos e resultados verificáveis.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "problem-framing",
+        "opportunity-prioritization",
+        "ai-product-risk"
+      ],
+      "can_approve_gate": false,
+      "authority": "execute"
+    },
+    "research": {
+      "title": "Pesquisa e evidências",
+      "skill": "pd-research",
+      "purpose": "Investigar fontes recuperáveis, preparar coleta humana e sintetizar evidências sem inventar observações.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "research-planning",
+        "evidence-synthesis",
+        "source-verification"
+      ],
+      "can_approve_gate": false,
+      "authority": "execute"
+    },
+    "ba": {
+      "title": "Análise de negócio",
+      "skill": "pd-business-analysis",
+      "purpose": "Modelar processos, regras, requisitos, dados e rastreabilidade.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "process-modelling",
+        "business-rules",
+        "requirements-traceability"
+      ],
+      "can_approve_gate": false,
+      "authority": "execute"
+    },
+    "ux": {
+      "title": "UX e serviço",
+      "skill": "pd-ux-service",
+      "purpose": "Analisar tarefas, jornadas, interação, acessibilidade e experiências de serviço.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "journey-mapping",
+        "interaction-design",
+        "usability-planning"
+      ],
+      "can_approve_gate": false,
+      "authority": "execute"
+    },
+    "feasibility": {
+      "title": "Viabilidade técnica",
+      "skill": "pd-feasibility",
+      "purpose": "Investigar integrações, arquitetura, migração, segurança, custos e falhas de soluções com IA.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "integration-analysis",
+        "data-migration",
+        "ai-evaluation"
+      ],
+      "can_approve_gate": false,
+      "authority": "execute"
+    },
+    "reviewer": {
+      "title": "Revisão independente",
+      "skill": "pd-quality-review",
+      "purpose": "Confrontar fontes e critérios; emitir findings sem alterar o trabalho avaliado.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "evidence-review",
+        "consistency-review",
+        "traceability-review"
+      ],
+      "can_approve_gate": false,
+      "authority": "review"
+    },
+    "rfp": {
+      "title": "Composição da RFP",
+      "skill": "pd-rfp",
+      "purpose": "Compor RFP para intake de squad agêntica, sem criar regras de negócio novas.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "rfp-composition",
+        "handoff-packaging"
+      ],
+      "can_approve_gate": false,
+      "authority": "execute"
+    },
+    "personas": {
+      "title": "Facilitação de personas",
+      "skill": "pd-personas",
+      "purpose": "Construir e consultar perspectivas sintéticas limitadas ao contexto autorizado do projeto.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "persona-curation",
+        "persona-consultation"
+      ],
+      "can_approve_gate": false,
+      "authority": "execute"
+    },
+    "documentation": {
+      "title": "Documentação",
+      "skill": "pd-documentation",
+      "purpose": "Escrever documentação executiva, comercial e técnica com referências por afirmação.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "executive-writing",
+        "technical-writing"
+      ],
+      "can_approve_gate": false,
+      "authority": "execute"
+    },
+    "presentations": {
+      "title": "Apresentações",
+      "skill": "pd-presentations",
+      "purpose": "Produzir decks executivos e técnicos com vínculo entre slides e artefatos.",
+      "grilling_skill": "pd-grilling",
+      "methods_skill": "pd-methods",
+      "subagents": [
+        "executive-storyline",
+        "technical-storyline"
+      ],
+      "can_approve_gate": false,
+      "authority": "execute"
+    }
+  },
+  "normative_authority": "human_project_owner",
+  "human_gate_approval": true
+}

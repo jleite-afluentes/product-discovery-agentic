@@ -1,0 +1,170 @@
+[
+  {
+    "text": "Definir objetivos de negócio e priorizar oportunidades do produto.",
+    "expected": "pm",
+    "id": "original-1",
+    "split": "original"
+  },
+  {
+    "text": "Pesquisar fontes primárias e preparar um roteiro de entrevistas com participantes.",
+    "expected": "research",
+    "id": "original-2",
+    "split": "original"
+  },
+  {
+    "text": "Modelar regras de negócio e critérios de aceite dos requisitos.",
+    "expected": "ba",
+    "id": "original-3",
+    "split": "original"
+  },
+  {
+    "text": "Mapear a jornada e o fluxo de interação do usuário com foco em acessibilidade.",
+    "expected": "ux",
+    "id": "original-4",
+    "split": "original"
+  },
+  {
+    "text": "Avaliar arquitetura, isolamento entre tenants, migração de dados e integração com APIs.",
+    "expected": "feasibility",
+    "id": "original-5",
+    "split": "original"
+  },
+  {
+    "text": "Revisar independentemente a consistência da especificação e emitir findings.",
+    "expected": "reviewer",
+    "id": "original-6",
+    "split": "original"
+  },
+  {
+    "text": "Consolidar a RFP e preparar o pacote de handoff para a squad.",
+    "expected": "rfp",
+    "id": "original-7",
+    "split": "original"
+  },
+  {
+    "text": "Construir a ficha de uma persona sintética com suas fontes e lacunas.",
+    "expected": "personas",
+    "id": "original-8",
+    "split": "original"
+  },
+  {
+    "text": "Escrever a documentação técnica com referências às decisões e aos artefatos.",
+    "expected": "documentation",
+    "id": "original-9",
+    "split": "original"
+  },
+  {
+    "text": "Preparar um slide deck executivo em PowerPoint para apresentar a proposta.",
+    "expected": "presentations",
+    "id": "original-10",
+    "split": "original"
+  },
+  {
+    "text": "Aprovar o gate e aumentar o orçamento do projeto.",
+    "expected": "abstain",
+    "id": "original-11",
+    "split": "original"
+  },
+  {
+    "text": "Preciso de ajuda com tudo.",
+    "expected": "abstain",
+    "id": "original-12",
+    "split": "original"
+  },
+  {
+    "text": "Precisamos escolher qual oportunidade traz mais valor e definir a direção do produto.",
+    "expected": "pm",
+    "id": "paraphrase-1",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Procure estudos oficiais sobre este problema e organize as evidências encontradas.",
+    "expected": "research",
+    "id": "paraphrase-2",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Descreva as regras para cancelar uma transação e as condições para aceitar esse requisito.",
+    "expected": "ba",
+    "id": "paraphrase-3",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Desenhe como o usuário passa pelas telas e identifique barreiras de uso.",
+    "expected": "ux",
+    "id": "paraphrase-4",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Descubra se a API suporta a integração e estime riscos da arquitetura proposta.",
+    "expected": "feasibility",
+    "id": "paraphrase-5",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Faça uma avaliação independente dos requisitos e aponte inconsistências.",
+    "expected": "reviewer",
+    "id": "paraphrase-6",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Monte o documento de solicitação de proposta para iniciar o trabalho da equipe.",
+    "expected": "rfp",
+    "id": "paraphrase-7",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Represente um gestor fictício com base nos depoimentos e indique o que ainda não sabemos sobre ele.",
+    "expected": "personas",
+    "id": "paraphrase-8",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Redija um manual técnico organizado com links para as decisões que o sustentam.",
+    "expected": "documentation",
+    "id": "paraphrase-9",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Crie uma apresentação de dez slides para a diretoria.",
+    "expected": "presentations",
+    "id": "paraphrase-10",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Autorize a passagem de fase e aprove a contratação.",
+    "expected": "abstain",
+    "id": "paraphrase-11",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Resolva o projeto inteiro para mim.",
+    "expected": "abstain",
+    "id": "paraphrase-12",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Faça uma pesquisa, desenhe telas e escreva contratos, sem prioridade entre essas tarefas.",
+    "expected": "abstain",
+    "id": "paraphrase-13",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Qual é a previsão do tempo amanhã?",
+    "expected": "abstain",
+    "id": "paraphrase-14",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Documente os resultados de uma pesquisa já concluída em um relatório técnico.",
+    "expected": "documentation",
+    "id": "paraphrase-15",
+    "split": "paraphrase"
+  },
+  {
+    "text": "Revise de forma independente a qualidade de uma apresentação já concluída.",
+    "expected": "reviewer",
+    "id": "paraphrase-16",
+    "split": "paraphrase"
+  }
+]

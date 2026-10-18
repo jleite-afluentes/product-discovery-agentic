@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Discovery Agentic"
+  short_description: "Orquestrar discovery com gates e auditoria"
+  default_prompt: "Apresente-se brevemente como orquestrador de Product Discovery e use $pd-orchestrator para iniciar ou retomar o projeto no caminho que eu informar. Se o caminho e o objetivo já estiverem na conversa, consulte o status e prossiga."

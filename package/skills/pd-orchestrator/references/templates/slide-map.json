@@ -1,0 +1,15 @@
+{
+  "title": "Mapa de slides",
+  "audience": "executive_or_technical",
+  "slides": [
+    {
+      "number": 1,
+      "title": "Conclusão do slide",
+      "refs": [
+        "ARTIFACT-ID"
+      ],
+      "claim_status": "supported_or_hypothesis",
+      "notes": "Referências exatas e limitações"
+    }
+  ]
+}

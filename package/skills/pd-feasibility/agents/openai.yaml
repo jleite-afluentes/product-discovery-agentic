@@ -1,0 +1,4 @@
+interface:
+  display_name: "Viabilidade técnica"
+  short_description: "Discovery com evidência e rastreabilidade"
+  default_prompt: "Use $pd-feasibility no projeto indicado e registre suas contribuições."

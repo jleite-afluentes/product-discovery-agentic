@@ -1,0 +1,4 @@
+interface:
+  display_name: "Facilitação de personas"
+  short_description: "Discovery com evidência e rastreabilidade"
+  default_prompt: "Use $pd-personas no projeto indicado e registre suas contribuições."

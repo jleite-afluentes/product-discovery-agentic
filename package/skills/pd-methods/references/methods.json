@@ -1,0 +1,3025 @@
+[
+  {
+    "id": "UMD-001",
+    "name": "A/B Testing",
+    "family": "experiment",
+    "gates": [
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "hipótese",
+      "métrica",
+      "desenho e público",
+      "limiares e regra de parada"
+    ],
+    "outputs": [
+      "protocolo",
+      "resultado e decisão possível"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Comparar uma métrica entre variantes com alocação definida; requer volume, desenho estatístico e janela adequados; mudanças simultâneas confundem o efeito.",
+    "acceptance": "Desenho e análise adequados à decisão; resultado inconclusivo é permitido.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-002",
+    "name": "AEIOU",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Observar atividades, ambientes, interações, objetos e usuários; registrar observação separada da interpretação.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-003",
+    "name": "Affinity Diagramming",
+    "family": "synthesis",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "corpus com IDs de fonte"
+    ],
+    "outputs": [
+      "achados e temas",
+      "relações com oportunidades"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Agrupar unidades com referência às notas originais; frequência no corpus não representa prevalência populacional.",
+    "acceptance": "Unidades de origem preservadas; contradições e inferências identificadas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-004",
+    "name": "Artifact Analysis",
+    "family": "secondary",
+    "gates": [
+      "G0",
+      "G1",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "fontes acessíveis e datadas"
+    ],
+    "outputs": [
+      "inventário de fontes",
+      "síntese com localização"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Examinar documentos e objetos usados no trabalho; distinguir procedimento prescrito de prática observada.",
+    "acceptance": "Afirmações materiais têm URL/passagem ou localização recuperável.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-005",
+    "name": "Automated Remote Research",
+    "family": "quant",
+    "gates": [
+      "G1",
+      "G2",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "instrumento",
+      "população/amostra",
+      "plano de análise"
+    ],
+    "outputs": [
+      "dados originais",
+      "análise e incerteza"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Coletar remotamente com instrumento e eventos definidos; verificar consentimento, seleção e qualidade dos dados.",
+    "acceptance": "Coleta e amostragem documentadas; não extrapolar além da cobertura.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-006",
+    "name": "Behavioral Mapping",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Registrar comportamento por tempo e espaço; não inferir motivação só da posição observada.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-007",
+    "name": "Bodystorming",
+    "family": "ideation",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "pm",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "problema",
+      "evidências",
+      "restrições e atores"
+    ],
+    "outputs": [
+      "alternativas",
+      "hipóteses e perguntas"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Encenar alternativas em contexto; registrar aprendizados como hipóteses até confronto com usuários.",
+    "acceptance": "Alternativas ligadas ao problema; decisão e divergências registradas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-008",
+    "name": "Brainstorm Graphic Organizers",
+    "family": "ideation",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "pm",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "problema",
+      "evidências",
+      "restrições e atores"
+    ],
+    "outputs": [
+      "alternativas",
+      "hipóteses e perguntas"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Estruturar geração de alternativas; volume de ideias não é evidência de valor.",
+    "acceptance": "Alternativas ligadas ao problema; decisão e divergências registradas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-009",
+    "name": "Business Origami",
+    "family": "process",
+    "gates": [
+      "G0",
+      "G1",
+      "G4"
+    ],
+    "owner": "ba",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "fontes sobre atores e tarefas"
+    ],
+    "outputs": [
+      "modelos",
+      "regras e exceções"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Representar atores e trocas com objetos; confirmar relações e exceções com responsáveis.",
+    "acceptance": "Modelo distingue AS-IS/TO-BE e tem responsável para confirmar regras.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-010",
+    "name": "Card Sorting",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Investigar agrupamentos feitos por participantes; registrar itens, amostra e diferenças entre grupos.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-011",
+    "name": "Case Studies",
+    "family": "secondary",
+    "gates": [
+      "G0",
+      "G1",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "fontes acessíveis e datadas"
+    ],
+    "outputs": [
+      "inventário de fontes",
+      "síntese com localização"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Comparar casos contextualizados e fontes; explicitar limites de transferência ao projeto.",
+    "acceptance": "Afirmações materiais têm URL/passagem ou localização recuperável.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-012",
+    "name": "Cognitive Mapping",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Elicitar relações percebidas pelo participante; não apresentar o mapa sintético do agente como modelo mental observado.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-013",
+    "name": "Cognitive Walkthrough",
+    "family": "inspection",
+    "gates": [
+      "G3",
+      "G4",
+      "G5"
+    ],
+    "owner": "reviewer",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "artefato versionado",
+      "critérios",
+      "avaliador distinto"
+    ],
+    "outputs": [
+      "findings",
+      "parecer e ações"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Inspecionar uma tarefa passo a passo com critérios e avaliadores; resultado é avaliação especializada.",
+    "acceptance": "Revisão independente rastreável; não é rotulada como teste de usuário.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-014",
+    "name": "Collage",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Usar composição visual para elicitar significados; interpretação precisa de fala e contexto do participante.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-015",
+    "name": "Competitive Testing",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Comparar alternativas com tarefas e condições equivalentes; familiaridade prévia pode enviesar.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-016",
+    "name": "Concept Mapping",
+    "family": "synthesis",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "corpus com IDs de fonte"
+    ],
+    "outputs": [
+      "achados e temas",
+      "relações com oportunidades"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Explicitar conceitos e relações; cada relação relevante requer origem ou rótulo de hipótese.",
+    "acceptance": "Unidades de origem preservadas; contradições e inferências identificadas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-017",
+    "name": "Content Analysis",
+    "family": "synthesis",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "corpus com IDs de fonte"
+    ],
+    "outputs": [
+      "achados e temas",
+      "relações com oportunidades"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Definir corpus e código de análise; registrar revisões do código e divergências de interpretação.",
+    "acceptance": "Unidades de origem preservadas; contradições e inferências identificadas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-018",
+    "name": "Content Inventory & Audit",
+    "family": "requirements",
+    "gates": [
+      "G4",
+      "G5"
+    ],
+    "owner": "ba",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "evidências",
+      "decisões",
+      "regras e escopo"
+    ],
+    "outputs": [
+      "requisitos/cenários",
+      "RTM"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Inventariar conteúdo com localização, owner e critério de qualidade; não confundir presença com utilidade.",
+    "acceptance": "Cada requisito tem origem, condição de aceite e pendência explícita.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-019",
+    "name": "Contextual Design",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Integrar observação e modelagem de trabalho; requer pesquisa contextual e consolidação verificável.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-020",
+    "name": "Contextual Inquiry",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Investigar tarefas no contexto de execução; distinguir o observado, o explicado e as interferências do pesquisador.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-021",
+    "name": "Creative Toolkits",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Preparar materiais para expressão dos participantes; não usar produção do agente como participação real.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-022",
+    "name": "Critical Incident Technique",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Reconstruir incidentes específicos com sequência e consequência; relatos retrospectivos podem ser incompletos.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-023",
+    "name": "Crowdsourcing",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Definir quem contribui e como selecionar contribuições; participação aberta não garante representatividade.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-024",
+    "name": "Cultural Probes",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Coletar sinais de contexto com materiais e instruções; sondas não medem prevalência nem causalidade.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-025",
+    "name": "Customer Experience Audit",
+    "family": "inspection",
+    "gates": [
+      "G3",
+      "G4",
+      "G5"
+    ],
+    "owner": "reviewer",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "artefato versionado",
+      "critérios",
+      "avaliador distinto"
+    ],
+    "outputs": [
+      "findings",
+      "parecer e ações"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Inspecionar pontos de contato com evidências e critérios; separar achado de auditoria de experiência observada.",
+    "acceptance": "Revisão independente rastreável; não é rotulada como teste de usuário.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-026",
+    "name": "Design Charette",
+    "family": "ideation",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "pm",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "problema",
+      "evidências",
+      "restrições e atores"
+    ],
+    "outputs": [
+      "alternativas",
+      "hipóteses e perguntas"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Organizar sessão curta de alternativas com registro; documentar opiniões minoritárias e decisões.",
+    "acceptance": "Alternativas ligadas ao problema; decisão e divergências registradas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-027",
+    "name": "Design Ethnography",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Observar contexto e práticas com responsável por campo; não simular etnografia com personas.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-028",
+    "name": "Design Workshops",
+    "family": "ideation",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "pm",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "problema",
+      "evidências",
+      "restrições e atores"
+    ],
+    "outputs": [
+      "alternativas",
+      "hipóteses e perguntas"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Definir participantes, objetivo e decisão da sessão; registrar autores e discordâncias.",
+    "acceptance": "Alternativas ligadas ao problema; decisão e divergências registradas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-029",
+    "name": "Desirability Testing",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Investigar percepção de alternativas com estímulos comparáveis; preferência declarada não prova compra.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-030",
+    "name": "Diary Studies",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Coletar registros ao longo do tempo com prompts; avaliar adesão e lacunas de registro.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-031",
+    "name": "Directed Storytelling",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Elicitar narrativa de evento vivido; preservar contexto e distinguir lembrança de observação direta.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-032",
+    "name": "Elito Method",
+    "family": "synthesis",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "corpus com IDs de fonte"
+    ],
+    "outputs": [
+      "achados e temas",
+      "relações com oportunidades"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Relacionar observação, julgamento e conceito; manter explícito o salto interpretativo.",
+    "acceptance": "Unidades de origem preservadas; contradições e inferências identificadas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-033",
+    "name": "Ergonomic Analysis",
+    "family": "inspection",
+    "gates": [
+      "G3",
+      "G4",
+      "G5"
+    ],
+    "owner": "reviewer",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "artefato versionado",
+      "critérios",
+      "avaliador distinto"
+    ],
+    "outputs": [
+      "findings",
+      "parecer e ações"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Avaliar adequação física e cognitiva da tarefa; requer competência e medições compatíveis quando físicas.",
+    "acceptance": "Revisão independente rastreável; não é rotulada como teste de usuário.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-034",
+    "name": "Evaluative Research",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Definir hipótese, participantes e critério de avaliação; não usar o termo como substituto de um protocolo.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-035",
+    "name": "Evidence-based Design",
+    "family": "decision",
+    "gates": [
+      "G0",
+      "G2",
+      "G3",
+      "G5"
+    ],
+    "owner": "pm",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "decisão",
+      "alternativas",
+      "evidências e critérios"
+    ],
+    "outputs": [
+      "comparação",
+      "recomendação e sensibilidade"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Justificar escolhas pelo conjunto de evidências e limitações; decisão aprovada não transforma alegação em fato.",
+    "acceptance": "Premissas e pesos expostos; aprovação de gate é humana.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-036",
+    "name": "Experience Prototyping",
+    "family": "prototype",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "hipótese",
+      "cenário",
+      "fidelidade e restrições"
+    ],
+    "outputs": [
+      "protótipo versionado",
+      "plano ou resultados de avaliação"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Construir experiência para explorar hipótese; separar o que foi simulado do que foi realmente oferecido.",
+    "acceptance": "O que foi construído/simulado e o que foi observado estão separados.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-037",
+    "name": "Experience Sampling Method",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Coletar respostas em momentos definidos; controlar carga do participante e viés de momentos capturados.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-038",
+    "name": "Experiments",
+    "family": "experiment",
+    "gates": [
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "hipótese",
+      "métrica",
+      "desenho e público",
+      "limiares e regra de parada"
+    ],
+    "outputs": [
+      "protocolo",
+      "resultado e decisão possível"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Predefinir hipótese, manipulação, resultado e contraprova; explicitar fatores de confusão.",
+    "acceptance": "Desenho e análise adequados à decisão; resultado inconclusivo é permitido.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-039",
+    "name": "Exploratory Research",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Investigar território ainda aberto; delimitar o que o estudo consegue e não consegue concluir.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-040",
+    "name": "Eyetracking",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Medir atenção com equipamento e protocolo adequados; olhar não demonstra compreensão ou intenção.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-041",
+    "name": "Flexible Modeling",
+    "family": "process",
+    "gates": [
+      "G0",
+      "G1",
+      "G4"
+    ],
+    "owner": "ba",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "fontes sobre atores e tarefas"
+    ],
+    "outputs": [
+      "modelos",
+      "regras e exceções"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Modelar atores e fluxos de forma revisável; preservar versões e regras que sustentam alterações.",
+    "acceptance": "Modelo distingue AS-IS/TO-BE e tem responsável para confirmar regras.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-042",
+    "name": "Fly-on-the-Wall Observation",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Observar sem interferência deliberada; registrar contexto, limites de acesso e interpretação.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-043",
+    "name": "Focus Groups",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Elicitar percepções coletivas com moderação; influência social impede tratar consenso como preferência individual.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-044",
+    "name": "Generative Research",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Explorar necessidades e possibilidades com participantes; resultados geram hipóteses de solução.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-045",
+    "name": "Graffiti Walls",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Coletar contribuições abertas em contexto; registrar exposição, autoria quando autorizada e viés de autoseleção.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-046",
+    "name": "Heuristic Evaluation",
+    "family": "inspection",
+    "gates": [
+      "G3",
+      "G4",
+      "G5"
+    ],
+    "owner": "reviewer",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "artefato versionado",
+      "critérios",
+      "avaliador distinto"
+    ],
+    "outputs": [
+      "findings",
+      "parecer e ações"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Aplicar heurísticas identificadas com severidade e exemplos; não substituir teste com usuários.",
+    "acceptance": "Revisão independente rastreável; não é rotulada como teste de usuário.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-047",
+    "name": "Image Boards",
+    "family": "ideation",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "pm",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "problema",
+      "evidências",
+      "restrições e atores"
+    ],
+    "outputs": [
+      "alternativas",
+      "hipóteses e perguntas"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Explorar referências e direção visual; aprovação estética não demonstra sucesso operacional.",
+    "acceptance": "Alternativas ligadas ao problema; decisão e divergências registradas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-048",
+    "name": "Interviews",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Preparar roteiro ligado à decisão e pedir episódios concretos; perguntas indutivas enviesam respostas.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-049",
+    "name": "KJ Technique",
+    "family": "synthesis",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "corpus com IDs de fonte"
+    ],
+    "outputs": [
+      "achados e temas",
+      "relações com oportunidades"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Agrupar e nomear relações preservando unidades de origem; consenso analítico não elimina contradições.",
+    "acceptance": "Unidades de origem preservadas; contradições e inferências identificadas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-050",
+    "name": "Kano Analysis",
+    "family": "quant",
+    "gates": [
+      "G1",
+      "G2",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "instrumento",
+      "população/amostra",
+      "plano de análise"
+    ],
+    "outputs": [
+      "dados originais",
+      "análise e incerteza"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Coletar respostas funcionais e disfuncionais com público definido; classificação depende da amostra e formulação.",
+    "acceptance": "Coleta e amostragem documentadas; não extrapolar além da cobertura.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-051",
+    "name": "Key Performance Indicators",
+    "family": "decision",
+    "gates": [
+      "G0",
+      "G2",
+      "G3",
+      "G5"
+    ],
+    "owner": "pm",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "decisão",
+      "alternativas",
+      "evidências e critérios"
+    ],
+    "outputs": [
+      "comparação",
+      "recomendação e sensibilidade"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Definir fórmula, baseline, fonte, frequência e responsável; indicador sem dado disponível é plano de medição.",
+    "acceptance": "Premissas e pesos expostos; aprovação de gate é humana.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-052",
+    "name": "Laddering",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Explorar relações entre atributos, consequências e valores; aprofundamento não prova causa objetiva.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-053",
+    "name": "Literature Reviews",
+    "family": "secondary",
+    "gates": [
+      "G0",
+      "G1",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "fontes acessíveis e datadas"
+    ],
+    "outputs": [
+      "inventário de fontes",
+      "síntese com localização"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Definir pergunta, busca, seleção e limites; registrar fontes primárias e conflitos.",
+    "acceptance": "Afirmações materiais têm URL/passagem ou localização recuperável.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-054",
+    "name": "The Love Letter & The Breakup Letter",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Elicitar vínculo e frustração com relatos dos participantes; expressão projetiva requer interpretação contextual.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-055",
+    "name": "Mental Model Diagrams",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Construir representação a partir de pesquisa; marcar regiões sem suporte e não inventar cognição.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-056",
+    "name": "Mind Mapping",
+    "family": "synthesis",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "corpus com IDs de fonte"
+    ],
+    "outputs": [
+      "achados e temas",
+      "relações com oportunidades"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Organizar conceitos e perguntas exploratórias; ligações propostas precisam de validação.",
+    "acceptance": "Unidades de origem preservadas; contradições e inferências identificadas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-057",
+    "name": "Observation",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Registrar tarefa, contexto e sequência; identificar diferenças entre notas factuais e interpretação.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-058",
+    "name": "Parallel Prototyping",
+    "family": "prototype",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "hipótese",
+      "cenário",
+      "fidelidade e restrições"
+    ],
+    "outputs": [
+      "protótipo versionado",
+      "plano ou resultados de avaliação"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Criar alternativas comparáveis antes de convergir; controlar fidelidade e tarefa avaliada.",
+    "acceptance": "O que foi construído/simulado e o que foi observado estão separados.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-059",
+    "name": "Participant Observation",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Registrar participação do pesquisador e seus efeitos; respeitar limites de acesso acordados.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-060",
+    "name": "Participatory Action Research",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Planejar investigação e mudança com participantes; explicitar responsabilidades e efeitos das intervenções.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-061",
+    "name": "Participatory Design",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Cocriar com envolvidos reais e registrar contribuições; persona sintética não substitui participação.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-062",
+    "name": "Personal Inventories",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Investigar artefatos pessoais relevantes com permissão; limitar coleta ao necessário e contextualizar uso.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-063",
+    "name": "Personas",
+    "family": "persona",
+    "gates": [
+      "G0",
+      "G1",
+      "G2",
+      "G4"
+    ],
+    "owner": "personas",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "fontes de perfil",
+      "papel",
+      "objetivos conhecidos"
+    ],
+    "outputs": [
+      "ficha rastreável",
+      "lacunas e hipóteses"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Sintetizar padrões sustentados por fontes; usar proto-persona quando a base ainda é hipotética.",
+    "acceptance": "Posições reais e inferências separadas; identidade não confere autoridade.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-064",
+    "name": "Photo Studies",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Definir o que registrar e por quê; preservar contexto e limites de interpretação das imagens.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-065",
+    "name": "Picture Cards",
+    "family": "generative",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "objetivo",
+      "participantes",
+      "roteiro e materiais"
+    ],
+    "outputs": [
+      "contribuições originais",
+      "hipóteses e oportunidades"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Usar estímulos para elicitação; registrar a interpretação do participante em vez de atribuir significado.",
+    "acceptance": "Contribuições reais separadas de facilitação ou simulação do agente.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-066",
+    "name": "Prototyping",
+    "family": "prototype",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "hipótese",
+      "cenário",
+      "fidelidade e restrições"
+    ],
+    "outputs": [
+      "protótipo versionado",
+      "plano ou resultados de avaliação"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Escolher fidelidade pela hipótese e tarefa; protótipo demonstra uma proposta, não viabilidade completa.",
+    "acceptance": "O que foi construído/simulado e o que foi observado estão separados.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-067",
+    "name": "Questionnaires",
+    "family": "quant",
+    "gates": [
+      "G1",
+      "G2",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "instrumento",
+      "população/amostra",
+      "plano de análise"
+    ],
+    "outputs": [
+      "dados originais",
+      "análise e incerteza"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Definir constructos e testar compreensão das perguntas; avaliar amostra e não resposta.",
+    "acceptance": "Coleta e amostragem documentadas; não extrapolar além da cobertura.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-068",
+    "name": "RITE",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Registrar cada mudança entre sessões e sua motivação; iteração não autoriza somar resultados de variantes como equivalentes.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-069",
+    "name": "Remote Moderated Research",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Verificar acesso, gravação, tarefa e moderação; limitações de dispositivo e conexão afetam o resultado.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-070",
+    "name": "Research Through Design",
+    "family": "prototype",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "hipótese",
+      "cenário",
+      "fidelidade e restrições"
+    ],
+    "outputs": [
+      "protótipo versionado",
+      "plano ou resultados de avaliação"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Documentar o que cada construção revelou; separar reflexão do autor de evidência de uso.",
+    "acceptance": "O que foi construído/simulado e o que foi observado estão separados.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-071",
+    "name": "Roleplaying",
+    "family": "ideation",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "pm",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "problema",
+      "evidências",
+      "restrições e atores"
+    ],
+    "outputs": [
+      "alternativas",
+      "hipóteses e perguntas"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Encenar papéis para revelar hipóteses e exceções; não atribuir falas simuladas a pessoas reais.",
+    "acceptance": "Alternativas ligadas ao problema; decisão e divergências registradas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-072",
+    "name": "Scenario Description Swimlanes",
+    "family": "process",
+    "gates": [
+      "G0",
+      "G1",
+      "G4"
+    ],
+    "owner": "ba",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "fontes sobre atores e tarefas"
+    ],
+    "outputs": [
+      "modelos",
+      "regras e exceções"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Representar sequência por ator e handoffs; verificar condições, espera e exceções.",
+    "acceptance": "Modelo distingue AS-IS/TO-BE e tem responsável para confirmar regras.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-073",
+    "name": "Scenarios",
+    "family": "requirements",
+    "gates": [
+      "G4",
+      "G5"
+    ],
+    "owner": "ba",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "evidências",
+      "decisões",
+      "regras e escopo"
+    ],
+    "outputs": [
+      "requisitos/cenários",
+      "RTM"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Descrever gatilho, contexto e resultado; distinguir cenário real, futuro e excepcional.",
+    "acceptance": "Cada requisito tem origem, condição de aceite e pendência explícita.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-074",
+    "name": "Secondary Research",
+    "family": "secondary",
+    "gates": [
+      "G0",
+      "G1",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "fontes acessíveis e datadas"
+    ],
+    "outputs": [
+      "inventário de fontes",
+      "síntese com localização"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Avaliar origem, data, método e pertinência de materiais existentes; não reproduzir alegações sem fonte recuperável.",
+    "acceptance": "Afirmações materiais têm URL/passagem ou localização recuperável.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-075",
+    "name": "Semantic Differential",
+    "family": "quant",
+    "gates": [
+      "G1",
+      "G2",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "instrumento",
+      "população/amostra",
+      "plano de análise"
+    ],
+    "outputs": [
+      "dados originais",
+      "análise e incerteza"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Definir pares de atributos e escala compreensível; comparar estímulos sob condições semelhantes.",
+    "acceptance": "Coleta e amostragem documentadas; não extrapolar além da cobertura.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-076",
+    "name": "Shadowing",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Acompanhar trabalho real registrando sequência e interrupções; observar poucos casos limita generalização.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-077",
+    "name": "Simulation Exercises",
+    "family": "prototype",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "hipótese",
+      "cenário",
+      "fidelidade e restrições"
+    ],
+    "outputs": [
+      "protótipo versionado",
+      "plano ou resultados de avaliação"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Testar cenários e recuperação com premissas explícitas; saída simulada não é dado de operação real.",
+    "acceptance": "O que foi construído/simulado e o que foi observado estão separados.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-078",
+    "name": "Site Search Analytics",
+    "family": "analytics",
+    "gates": [
+      "G1",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "dados reais",
+      "definição de eventos",
+      "período e cobertura"
+    ],
+    "outputs": [
+      "análise reproduzível",
+      "limites e hipóteses"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Verificar eventos, períodos, termos e cobertura; pesquisas vazias não revelam sozinhas a intenção.",
+    "acceptance": "Qualidade da instrumentação verificada; proxy não é promovida a causa.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-079",
+    "name": "Speed Dating",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Apresentar conceitos em rodadas comparáveis; reações rápidas orientam exploração, não compromisso de compra.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-080",
+    "name": "Stakeholder Maps",
+    "family": "process",
+    "gates": [
+      "G0",
+      "G1",
+      "G4"
+    ],
+    "owner": "ba",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "fontes sobre atores e tarefas"
+    ],
+    "outputs": [
+      "modelos",
+      "regras e exceções"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Identificar influência, responsabilidade e alçada com fontes; validar papéis desconhecidos.",
+    "acceptance": "Modelo distingue AS-IS/TO-BE e tem responsável para confirmar regras.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-081",
+    "name": "Stakeholder Walkthrough",
+    "family": "inspection",
+    "gates": [
+      "G3",
+      "G4",
+      "G5"
+    ],
+    "owner": "reviewer",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "artefato versionado",
+      "critérios",
+      "avaliador distinto"
+    ],
+    "outputs": [
+      "findings",
+      "parecer e ações"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Percorrer cenário com responsável real; registrar aceite e divergências sem presumir autorização.",
+    "acceptance": "Revisão independente rastreável; não é rotulada como teste de usuário.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-082",
+    "name": "Storyboards",
+    "family": "prototype",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "hipótese",
+      "cenário",
+      "fidelidade e restrições"
+    ],
+    "outputs": [
+      "protótipo versionado",
+      "plano ou resultados de avaliação"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Explicitar ator, contexto, sequência e benefício hipotético; narrativa convincente não valida demanda.",
+    "acceptance": "O que foi construído/simulado e o que foi observado estão separados.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-083",
+    "name": "Surveys",
+    "family": "quant",
+    "gates": [
+      "G1",
+      "G2",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "instrumento",
+      "população/amostra",
+      "plano de análise"
+    ],
+    "outputs": [
+      "dados originais",
+      "análise e incerteza"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Definir população, recrutamento, instrumento e análise; explicitar seleção e incerteza.",
+    "acceptance": "Coleta e amostragem documentadas; não extrapolar além da cobertura.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-084",
+    "name": "Task Analysis",
+    "family": "process",
+    "gates": [
+      "G0",
+      "G1",
+      "G4"
+    ],
+    "owner": "ba",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "fontes sobre atores e tarefas"
+    ],
+    "outputs": [
+      "modelos",
+      "regras e exceções"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Decompor objetivo, passos, decisões e exceções a partir do trabalho; não confundir procedimento ideal com real.",
+    "acceptance": "Modelo distingue AS-IS/TO-BE e tem responsável para confirmar regras.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-085",
+    "name": "Territory Maps",
+    "family": "synthesis",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "corpus com IDs de fonte"
+    ],
+    "outputs": [
+      "achados e temas",
+      "relações com oportunidades"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Mapear domínio, fronteiras e relações; destacar áreas não investigadas.",
+    "acceptance": "Unidades de origem preservadas; contradições e inferências identificadas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-086",
+    "name": "Thematic Networks",
+    "family": "synthesis",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "corpus com IDs de fonte"
+    ],
+    "outputs": [
+      "achados e temas",
+      "relações com oportunidades"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Relacionar códigos, temas e suporte por fonte; testar coerência e casos negativos.",
+    "acceptance": "Unidades de origem preservadas; contradições e inferências identificadas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-087",
+    "name": "Think-aloud Protocol",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Definir tarefa e orientação neutra; verbalização pode alterar desempenho e não revela todo o raciocínio.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-088",
+    "name": "Time-aware Research",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Planejar observação em momentos e ciclos relevantes; não generalizar um único horário ou período.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-089",
+    "name": "Touchstone Tours",
+    "family": "field",
+    "gates": [
+      "G0",
+      "G1"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta de pesquisa",
+      "acesso a participantes/contexto",
+      "protocolo de coleta"
+    ],
+    "outputs": [
+      "registros originais",
+      "observações contextualizadas"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Pedir que participante explique locais e objetos significativos; interpretar com sua narrativa.",
+    "acceptance": "Há registro de coleta real e limitações, ou saída permanece plano.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-090",
+    "name": "Triading",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Comparar trios para elicitar construtos; evitar impor categorias do pesquisador.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-091",
+    "name": "Triangulation",
+    "family": "synthesis",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "corpus com IDs de fonte"
+    ],
+    "outputs": [
+      "achados e temas",
+      "relações com oportunidades"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Confrontar fontes e métodos com independência conhecida; múltiplas cópias da mesma origem não são confirmação.",
+    "acceptance": "Unidades de origem preservadas; contradições e inferências identificadas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-092",
+    "name": "Unobtrusive Measures",
+    "family": "analytics",
+    "gates": [
+      "G1",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "dados reais",
+      "definição de eventos",
+      "período e cobertura"
+    ],
+    "outputs": [
+      "análise reproduzível",
+      "limites e hipóteses"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Analisar sinais indiretos com origem e contexto; proxy exige justificativa e verificação.",
+    "acceptance": "Qualidade da instrumentação verificada; proxy não é promovida a causa.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-093",
+    "name": "Usability Report",
+    "family": "documentation",
+    "gates": [
+      "G3",
+      "G5",
+      "G6"
+    ],
+    "owner": "documentation",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "resultados e versões",
+      "audiência"
+    ],
+    "outputs": [
+      "relatório",
+      "mapa de origem"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Relatar método, participantes, versões, achados e severidade; não omitir limitações e casos sem sucesso.",
+    "acceptance": "Conteúdo material tem referências e não supera a força da evidência.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-094",
+    "name": "Usability Testing",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Observar tarefas com usuários reais e critérios predefinidos; teste não confirma sozinho valor comercial.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-095",
+    "name": "User Journey Maps",
+    "family": "uxresearch",
+    "gates": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "pergunta",
+      "participantes reais",
+      "tarefa/instrumento e versão"
+    ],
+    "outputs": [
+      "registros",
+      "achados e limitações"
+    ],
+    "execution": "human_led",
+    "decision_and_limits": "Ligar etapas, canais, ações e dores às fontes; emoções inferidas permanecem hipóteses.",
+    "acceptance": "Protocolo e amostra explícitos; comportamento observado separado de opinião.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-096",
+    "name": "Value Opportunity Analysis",
+    "family": "decision",
+    "gates": [
+      "G0",
+      "G2",
+      "G3",
+      "G5"
+    ],
+    "owner": "pm",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "decisão",
+      "alternativas",
+      "evidências e critérios"
+    ],
+    "outputs": [
+      "comparação",
+      "recomendação e sensibilidade"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Comparar oportunidades por dimensões de valor explícitas; pesos são decisões, não fatos do mercado.",
+    "acceptance": "Premissas e pesos expostos; aprovação de gate é humana.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-097",
+    "name": "Web Analytics",
+    "family": "analytics",
+    "gates": [
+      "G1",
+      "G3"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "dados reais",
+      "definição de eventos",
+      "período e cobertura"
+    ],
+    "outputs": [
+      "análise reproduzível",
+      "limites e hipóteses"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Verificar instrumentação, funil, período e qualidade; correlação de eventos não prova causalidade.",
+    "acceptance": "Qualidade da instrumentação verificada; proxy não é promovida a causa.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-098",
+    "name": "Weighted Matrix",
+    "family": "decision",
+    "gates": [
+      "G0",
+      "G2",
+      "G3",
+      "G5"
+    ],
+    "owner": "pm",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "decisão",
+      "alternativas",
+      "evidências e critérios"
+    ],
+    "outputs": [
+      "comparação",
+      "recomendação e sensibilidade"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Explicitar critérios, pesos, notas e sensibilidade; resultado depende dos julgamentos de entrada.",
+    "acceptance": "Premissas e pesos expostos; aprovação de gate é humana.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-099",
+    "name": "Wizard of Oz",
+    "family": "prototype",
+    "gates": [
+      "G2",
+      "G3"
+    ],
+    "owner": "ux",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "hipótese",
+      "cenário",
+      "fidelidade e restrições"
+    ],
+    "outputs": [
+      "protótipo versionado",
+      "plano ou resultados de avaliação"
+    ],
+    "execution": "hybrid",
+    "decision_and_limits": "Simular capacidade com operador e protocolo; documentar o que foi manual e as condições de avaliação.",
+    "acceptance": "O que foi construído/simulado e o que foi observado estão separados.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  },
+  {
+    "id": "UMD-100",
+    "name": "Word Clouds",
+    "family": "synthesis",
+    "gates": [
+      "G1",
+      "G2"
+    ],
+    "owner": "research",
+    "skill": "pd-methods",
+    "assessment_status": "applicability_reviewed",
+    "assessment_origin": "Avaliação de aplicabilidade escrita para este pacote; não reprodução do protocolo do livro.",
+    "inputs": [
+      "corpus com IDs de fonte"
+    ],
+    "outputs": [
+      "achados e temas",
+      "relações com oportunidades"
+    ],
+    "execution": "agent_assisted",
+    "decision_and_limits": "Usar como exploração lexical com limpeza e contexto; tamanho de palavra não demonstra importância ou sentimento.",
+    "acceptance": "Unidades de origem preservadas; contradições e inferências identificadas.",
+    "persona_handoff": "Consultar perspectiva sintética para hipóteses e perguntas; evidência humana exige fonte real.",
+    "handoff_to": "reviewer; depois orquestrador e owner humano para gate",
+    "human_gate_approval": true,
+    "source": "https://designresearchmethods.com/universal-methods-of-design-100/",
+    "source_scope": "Nome e pertencimento à lista original de 100 métodos; aplicação e critérios são propostas deste pacote."
+  }
+]

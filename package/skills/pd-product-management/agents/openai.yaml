@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Manager"
+  short_description: "Discovery com evidência e rastreabilidade"
+  default_prompt: "Use $pd-product-management no projeto indicado e registre suas contribuições."

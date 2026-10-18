@@ -1,0 +1,77 @@
+{
+  "version": "0.2.1",
+  "routes": {
+    "pm": {
+      "agent": "pm",
+      "description": "Conectar estratégia, transformação digital, produtos digitais e IA a valor, riscos e resultados verificáveis.",
+      "label": "Estratégia e valor",
+      "short_description": "Objetivos, valor, estratégia de produto, transformação digital e resultados."
+    },
+    "research": {
+      "agent": "research",
+      "description": "Investigar fontes recuperáveis, preparar coleta humana e sintetizar evidências sem inventar observações.",
+      "label": "Pesquisa e evidências",
+      "short_description": "Pesquisa, fontes, evidências e síntese de achados."
+    },
+    "ba": {
+      "agent": "ba",
+      "description": "Modelar processos, regras, requisitos, dados e rastreabilidade.",
+      "label": "Processos e requisitos",
+      "short_description": "Processos, regras, dados e requisitos rastreáveis."
+    },
+    "ux": {
+      "agent": "ux",
+      "description": "Analisar tarefas, jornadas, interação, acessibilidade e experiências de serviço.",
+      "label": "Experiência e serviço",
+      "short_description": "Tarefas, jornada, interação, acessibilidade e serviço."
+    },
+    "feasibility": {
+      "agent": "feasibility",
+      "description": "Investigar integrações, arquitetura, migração, segurança, custos e falhas de soluções com IA.",
+      "label": "Viabilidade técnica",
+      "short_description": "Arquitetura, integrações, migração, segurança, custo e risco de IA."
+    },
+    "reviewer": {
+      "agent": "reviewer",
+      "description": "Confrontar fontes e critérios; emitir findings sem alterar o trabalho avaliado.",
+      "label": "Revisão independente",
+      "short_description": "Checagem independente de evidência, consistência e critérios."
+    },
+    "rfp": {
+      "agent": "rfp",
+      "description": "Compor RFP para intake de squad agêntica, sem criar regras de negócio novas.",
+      "label": "RFP e intake",
+      "short_description": "Intake, escopo, requisitos e composição de RFP."
+    },
+    "personas": {
+      "agent": "personas",
+      "description": "Construir e consultar perspectivas sintéticas limitadas ao contexto autorizado do projeto.",
+      "label": "Personas sintéticas",
+      "short_description": "Criar ou consultar perspectivas sintéticas do projeto."
+    },
+    "documentation": {
+      "agent": "documentation",
+      "description": "Escrever documentação executiva, comercial e técnica com referências por afirmação.",
+      "label": "Documentação",
+      "short_description": "Escrever documentação técnica, executiva ou comercial."
+    },
+    "presentations": {
+      "agent": "presentations",
+      "description": "Produzir decks executivos e técnicos com vínculo entre slides e artefatos.",
+      "label": "Apresentações",
+      "short_description": "Planejar ou produzir apresentação executiva ou técnica."
+    },
+    "abstain": {
+      "agent": null,
+      "description": "Ambíguo, múltiplos domínios sem uma tarefa principal, aprovação humana ou fora do domínio.",
+      "label": "Escalar ou pedir esclarecimento",
+      "short_description": "Ambiguidade, aprovação humana, múltiplas tarefas ou fora do domínio."
+    }
+  },
+  "min_confidence": 0.8,
+  "automatic_dispatch": false,
+  "calibration_report": null,
+  "note": "Configuração candidata em português curto. A avaliação atual não calibra limiar nem autoriza despacho automático.",
+  "max_context_chars": 6000,
+  "attempt_budget": 1
+}
