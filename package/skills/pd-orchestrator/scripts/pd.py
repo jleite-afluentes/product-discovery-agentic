@@ -15,8 +15,10 @@ import uuid
 from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.2.1"
-KINDS = {"source", "evidence", "hypothesis", "persona", "decision", "question", "risk", "experiment", "finding", "artifact", "review", "gate_request", "approval", "task", "handoff"}
+VERSION = "0.4.0"
+KINDS = {"source", "evidence", "hypothesis", "persona", "decision", "question", "risk", "experiment", "finding", "artifact", "review", "gate_request", "approval", "task", "handoff", "entity", "relation", "context_review", "context_feedback"}
+ENTITY_TYPES = {"domain", "process", "rule", "requirement", "decision", "risk", "persona", "system", "data", "gate", "artifact", "concept"}
+RELATION_TYPES = {"supports", "contradicts", "depends_on", "affects", "owned_by", "used_in", "produces", "blocks", "replaces", "revokes", "related_to"}
 
 
 def canonical(value):
@@ -144,7 +146,7 @@ class Project:
         return self.get(ident)
 
     def record(self, kind, actor, body, ident=None):
-        require(kind not in {"artifact", "review", "gate_request", "approval", "task", "handoff"}, "Use o comando específico para este tipo.")
+        require(kind not in {"artifact", "review", "gate_request", "approval", "task", "handoff", "context_review", "context_feedback"}, "Use o comando específico para este tipo.")
         require(isinstance(body, dict) and body.get("title"), "Registro exige title.")
         if kind == "source":
             require(body.get("locator") and body.get("content") and body.get("source_type") in {"document", "web", "user_report", "fieldwork", "simulation"}, "Fonte exige locator, content e source_type válidos.")
@@ -165,6 +167,26 @@ class Project:
             require(body.get("status") in {"open", "resolved"} and body.get("blocking") in {True, False}, "Questão exige status e blocking.")
             if body["status"] == "resolved":
                 require(body.get("refs"), "Resolução exige fonte de resposta.")
+        if kind == "entity":
+            require(body.get("entity_type") in ENTITY_TYPES, "Entidade exige entity_type conhecido.")
+            require(body.get("refs") and isinstance(body.get("aliases", []), list), "Entidade exige refs e aliases em lista.")
+            require(all(isinstance(x, str) and x.strip() for x in body.get("aliases", [])), "Aliases devem ser textos não vazios.")
+            require(any(self.get(r)["kind"] in {"source", "evidence"} for r in body["refs"]), "Entidade exige fonte ou evidência de origem.")
+            require(body.get("knowledge_status", "proposed") == "proposed", "Conhecimento só pode ser aceito por context-accept.")
+            body["knowledge_status"] = "proposed"
+        if kind == "relation":
+            require(body.get("predicate") in RELATION_TYPES, "Relação exige predicate conhecido.")
+            require(body.get("certainty") in {"confirmed", "possible"}, "Relação deve distinguir confirmed de possible.")
+            require(body.get("subject") and body.get("object") and body["subject"] != body["object"], "Relação exige subject e object distintos.")
+            require(body.get("refs") and body.get("rationale"), "Relação exige refs e rationale.")
+            require(self.get(body["subject"])["kind"] == "entity" and self.get(body["object"])["kind"] == "entity", "Extremos da relação devem ser entidades do projeto.")
+            require(any(self.get(r)["kind"] in {"source", "evidence"} for r in body["refs"]), "Relação exige fonte original ou evidência rastreável.")
+            if body["predicate"] in {"replaces", "revokes"}:
+                require(body.get("target_relation") and self.get(body["target_relation"])["kind"] == "relation", "replaces/revokes exige target_relation existente.")
+                require(body["certainty"] == "confirmed", "Substituição ou revogação exige decisão confirmada e rastreável.")
+                body["refs"] = list(dict.fromkeys(body.get("refs", []) + [body["target_relation"]]))
+            require(body.get("knowledge_status", "proposed") == "proposed", "Conhecimento só pode ser aceito por context-accept.")
+            body["knowledge_status"] = "proposed"
         with self.transaction():
             return self.save(kind, actor, body, ident)
 
@@ -399,6 +421,288 @@ class Project:
         records = self.records()
         return {"project": self.meta, "approved_gates": self.active_gates(), "tasks": [r for r in records if r["kind"] == "task" and r["body"]["state"] != "completed"], "open_questions": [r for r in records if r["kind"] == "question" and r["body"]["status"] == "open"], "stale_artifacts": [r["id"] for r in records if r["kind"] == "artifact" and self.stale(r)], "records": len(records)}
 
+    @staticmethod
+    def _terms(text):
+        import unicodedata
+        value = unicodedata.normalize("NFKD", str(text).lower())
+        value = "".join(c for c in value if not unicodedata.combining(c))
+        return set(re.findall(r"[a-z0-9_]{2,}", value))
+
+    def _active_relations(self):
+        relations = [r for r in self.records("relation") if r["body"].get("knowledge_status") == "accepted" and not self.stale(r)]
+        superseded = {r["body"].get("target_relation") for r in relations if r["body"].get("predicate") in {"replaces", "revokes"}}
+        return [r for r in relations if r["id"] not in superseded and r["body"].get("predicate") not in {"replaces", "revokes"}]
+
+    def graph_search(self, query, limit=10):
+        require(query.strip() and 1 <= limit <= 100, "Informe busca e limite entre 1 e 100.")
+        terms = self._terms(query)
+        ranked = []
+        relation_map = self._active_relations()
+        for record in self.records():
+            if record["kind"] in {"approval", "gate_request", "review", "task", "handoff", "context_review", "context_feedback"}:
+                continue
+            if record["kind"] in {"entity", "relation"} and record["body"].get("knowledge_status") != "accepted": continue
+            if self.stale(record): continue
+            body = record["body"]
+            fields = [body.get("title", ""), body.get("content", ""), body.get("observation", ""), body.get("statement", ""), body.get("rationale", ""), body.get("entity_type", ""), body.get("predicate", "")]
+            if record["kind"] == "entity": fields.extend(body.get("aliases", []))
+            if record["kind"] == "relation": fields.extend([body.get("subject", ""), body.get("object", ""), body.get("certainty", "")])
+            searchable = self._terms(" ".join(map(str, fields)))
+            overlap = terms & searchable
+            if not overlap: continue
+            score = len(overlap) / max(1, len(terms))
+            score += 0.25 if record["kind"] == "entity" else 0
+            if record["kind"] == "relation" and record not in relation_map: score *= 0.5
+            ranked.append((score, record["created"], record))
+        ranked.sort(key=lambda x: (-x[0], x[1], x[2]["id"]))
+        return [{"score": round(score, 4), "record": self._compact_record(record)} for score, _, record in ranked[:limit]]
+
+    @staticmethod
+    def _compact_record(record):
+        body = record["body"]
+        keep = {k: body[k] for k in ("title", "entity_type", "aliases", "predicate", "subject", "object", "certainty", "content", "observation", "statement", "rationale", "locator", "source_type", "refs", "pinned_refs", "status", "blocking", "limitations", "unknowns") if k in body}
+        if isinstance(keep.get("content"), str) and len(keep["content"]) > 3000:
+            keep["content"] = keep["content"][:3000] + "…[conteúdo reduzido; consulte show para o registro original]"
+        return {"id": record["id"], "version": record["version"], "kind": record["kind"], "hash": record["hash"], "actor": record["actor"], "created": record["created"], "stale": False, "body": keep}
+
+    def graph_neighbors(self, ident, depth=1, include_possible=True):
+        require(self.get(ident)["kind"] == "entity" and self.get(ident)["body"].get("knowledge_status") == "accepted", "neighbors requer ID de entidade aceita.")
+        require(1 <= depth <= 4, "depth deve estar entre 1 e 4.")
+        relations = self._active_relations()
+        adjacency = {}
+        for relation in relations:
+            b = relation["body"]
+            adjacency.setdefault(b["subject"], []).append((relation, b["object"]))
+            adjacency.setdefault(b["object"], []).append((relation, b["subject"]))
+        seen, frontier, edges = {ident}, {ident}, []
+        for level in range(1, depth + 1):
+            next_frontier = set()
+            for current in frontier:
+              for rel, other in adjacency.get(current, []):
+                b = rel["body"]
+                if not include_possible and b["certainty"] != "confirmed": continue
+                edges.append({"depth": level, "relation": self._compact_record(rel), "neighbor": self._compact_record(self.get(other))})
+                if other not in seen: next_frontier.add(other)
+            seen |= next_frontier; frontier = next_frontier
+            if not frontier: break
+        return {"root": self._compact_record(self.get(ident)), "depth": depth, "edges": edges}
+
+    def graph_impact(self, ident, include_possible=True):
+        """Return sourced outgoing impacts and explicit possible impacts, with paths."""
+        require(self.get(ident)["kind"] == "entity" and self.get(ident)["body"].get("knowledge_status") == "accepted", "impact requer ID de entidade aceita.")
+        relations = self._active_relations()
+        outgoing = {}
+        for relation in relations: outgoing.setdefault(relation["body"]["subject"], []).append(relation)
+        result = {"root": self._compact_record(self.get(ident)), "confirmed": [], "possible": []}
+        queue = [(ident, [])]; best_depth = {ident: 0}; seen_edges = set()
+        while queue:
+            current, path = queue.pop(0)
+            for rel in outgoing.get(current, []):
+                b = rel["body"]
+                if not include_possible and b["certainty"] != "confirmed": continue
+                edge_key = (rel["id"], tuple(x["relation"]["id"] for x in path))
+                if edge_key in seen_edges: continue
+                seen_edges.add(edge_key)
+                node = self.get(b["object"])
+                item = {"path": [x["relation"]["id"] for x in path] + [rel["id"]], "depth": len(path) + 1, "relation": self._compact_record(rel), "target": self._compact_record(node)}
+                path_is_possible = b["certainty"] == "possible" or any(x["relation"]["body"]["certainty"] == "possible" for x in path)
+                result["possible" if path_is_possible else "confirmed"].append(item)
+                if len(path) < 6 and best_depth.get(node["id"], 99) > len(path) + 1:
+                    best_depth[node["id"]] = len(path) + 1; queue.append((node["id"], path + [item]))
+        return result
+
+    def context_packet(self, query, refs=None, max_chars=12000, limit=12):
+        started = time.perf_counter()
+        require(500 <= max_chars <= 100000, "max_chars deve estar entre 500 e 100000.")
+        selected = []
+        seen = set()
+        for ident in refs or []:
+            record = self.get(ident)
+            require(not self.stale(record), "Referência desatualizada não pode entrar no contexto: " + ident)
+            require(record["kind"] not in {"entity", "relation"} or record["body"].get("knowledge_status") == "accepted", "Proposta de conhecimento precisa de context-accept antes de uso.")
+            if record["id"] not in seen: selected.append({"score": 1.0, "record": self._compact_record(record)}); seen.add(record["id"])
+        matches = self.graph_search(query, limit)
+        for item in matches:
+            if item["record"]["id"] not in seen: selected.append(item); seen.add(item["record"]["id"])
+        matched_entities = {x["record"]["id"] for x in matches if x["record"]["kind"] == "entity"}
+        for item in matches:
+            if item["record"]["kind"] == "relation":
+                for ref in item["record"]["body"].get("refs", []):
+                    origin = self.get(ref)
+                    if origin["kind"] in {"source", "evidence"} and origin["id"] not in seen:
+                        selected.append({"score": 0.4, "record": self._compact_record(origin)}); seen.add(origin["id"])
+        for rel in self._active_relations():
+            b = rel["body"]
+            if b["subject"] in matched_entities or b["object"] in matched_entities:
+                if rel["id"] not in seen: selected.append({"score": 0.5, "record": self._compact_record(rel)}); seen.add(rel["id"])
+                for ref in b.get("refs", []):
+                    origin = self.get(ref)
+                    if origin["kind"] in {"source", "evidence", "hypothesis", "decision", "question"} and origin["id"] not in seen:
+                        selected.append({"score": 0.4, "record": self._compact_record(origin)}); seen.add(origin["id"])
+        used, records = 0, []
+        for item in selected:
+            content = item.get("record", {}).get("body", {}).get("content")
+            if isinstance(content, str) and len(content) > 3000:
+                item["record"]["body"]["content"] = content[:3000] + "…[conteúdo reduzido; consulte o registro original]"
+            encoded = canonical(item)
+            if used + len(encoded) > max_chars: continue
+            records.append(item); used += len(encoded)
+        latency_ms = round((time.perf_counter() - started) * 1000, 3)
+        telemetry = {"query_sha256": sha(query), "record_versions": [{"id": x["record"]["id"], "version": x["record"]["version"], "hash": x["record"]["hash"]} for x in records], "record_count": len(records), "context_chars": used, "max_chars": max_chars, "truncated": len(records) < len(selected), "retrieval_latency_ms": latency_ms, "token_count": None}
+        with self.transaction():
+            event_hash = self.event("context.retrieved", "orchestrator", telemetry)
+            event_seq = self.db.execute("SELECT seq FROM events WHERE hash=?", (event_hash,)).fetchone()[0]
+        return {"project_id": self.meta["id"], "query": query, "records": records, "record_count": len(records), "context_chars": used, "max_chars": max_chars, "truncated": len(records) < len(selected), "retrieval_latency_ms": latency_ms, "token_count": None, "token_count_note": "Token count is not inferred from characters; obtain it from the executing harness.", "graph_revision": max((r["created"] for r in self.records()), default=None), "audit_event_seq": event_seq, "audit_event_hash": event_hash}
+
+    def context_feedback(self, actor, event_seq, relevant_refs, retrieved_relevant, omitted_relevant, irrelevant, harness_tokens=None, reviewed_response_ms=None, rating=None):
+        event = self.db.execute("SELECT * FROM events WHERE seq=?", (event_seq,)).fetchone()
+        require(event is not None, "Evento de recuperação inexistente.")
+        event_body = json.loads(event["body"])
+        require(event_body["action"] == "context.retrieved", "Evento não é uma recuperação de contexto.")
+        require(not any(r["body"].get("context_event_seq") == event_seq for r in self.records("context_feedback")), "Esta recuperação já recebeu feedback; use um novo evento para uma nova avaliação.")
+        retrieved = {x["id"] for x in event_body["data"]["record_versions"]}
+        for snapshot in event_body["data"]["record_versions"]:
+            require(self.get(snapshot["id"])["hash"] == snapshot["hash"], "O contexto mudou desde a recuperação; gere pacote novo antes de avaliar.")
+        relevant, selected, omitted, irrelevant_set = set(relevant_refs), set(retrieved_relevant), set(omitted_relevant), set(irrelevant)
+        require(relevant == selected | omitted and not selected & omitted, "relevant_refs deve ser retrieved_relevant + omitted_relevant, sem sobreposição.")
+        require(selected <= retrieved and irrelevant_set <= retrieved and not selected & irrelevant_set, "Refs relevantes selecionadas e irrelevantes devem pertencer ao contexto e não se sobrepor.")
+        require(selected | irrelevant_set == retrieved, "Rotule todos os registros recuperados como relevantes ou irrelevantes para medir precisão.")
+        require(not omitted & retrieved, "Uma referência omitida não pode estar no pacote recuperado.")
+        for ident in relevant | irrelevant_set: self.get(ident)
+        require(harness_tokens is None or (isinstance(harness_tokens, int) and harness_tokens >= 0), "harness_tokens deve ser inteiro não negativo ou null.")
+        require(reviewed_response_ms is None or (isinstance(reviewed_response_ms, int) and reviewed_response_ms >= 0), "reviewed_response_ms deve ser inteiro não negativo ou null.")
+        require(rating is None or (isinstance(rating, int) and 1 <= rating <= 5), "rating deve estar entre 1 e 5.")
+        precision = len(selected) / len(retrieved) if retrieved else None
+        recall = len(selected) / len(relevant) if relevant else None
+        body = {"title": f"Feedback de contexto seq {event_seq}", "context_event_seq": event_seq, "relevant_refs": sorted(relevant), "retrieved_relevant": sorted(selected), "omitted_relevant": sorted(omitted), "irrelevant_refs": sorted(irrelevant_set), "precision": round(precision, 4) if precision is not None else None, "recall": round(recall, 4) if recall is not None else None, "harness_tokens": harness_tokens, "reviewed_response_ms": reviewed_response_ms, "rating": rating, "refs": sorted(relevant | irrelevant_set)}
+        with self.transaction(): return self.save("context_feedback", actor, body)
+
+    def context_accept(self, actor, ids, rationale):
+        require(actor == "reviewer" or actor == "human:" + self.meta["owner"], "Aceitação do contexto exige reviewer independente ou owner humano.")
+        require(ids and rationale.strip() and len(ids) == len(set(ids)), "Informe IDs únicos e racional da revisão.")
+        proposals = [self.get(ident) for ident in ids]
+        require(all(r["kind"] in {"entity", "relation"} and r["body"].get("knowledge_status") == "proposed" and not self.stale(r) for r in proposals), "Somente propostas atuais de entidade/relação podem ser aceitas.")
+        if actor == "reviewer": require(all(r["actor"] != actor for r in proposals), "Revisor não pode aceitar proposta própria.")
+        versions = [{"id": r["id"], "version": r["version"], "hash": r["hash"]} for r in proposals]
+        entity_ids = {r["id"] for r in proposals if r["kind"] == "entity"}
+        with self.transaction():
+            review = self.save("context_review", actor, {"title": "Revisão e aceite de conhecimento", "verdict": "accepted", "rationale": rationale, "proposed_versions": versions})
+            accepted = []
+            for old in [r for r in proposals if r["kind"] == "entity"]:
+                body = dict(old["body"]); body["knowledge_status"] = "accepted"; body["accepted_by"] = actor; body["refs"] = list(dict.fromkeys(body.get("refs", []) + [review["id"]]))
+                accepted.append(self.save("entity", actor, body, old["id"]))
+            for old in [r for r in proposals if r["kind"] == "relation"]:
+                body = dict(old["body"])
+                for endpoint in (body["subject"], body["object"]):
+                    endpoint_record = self.get(endpoint)
+                    require(endpoint_record["body"].get("knowledge_status") == "accepted" or endpoint in entity_ids, "Aceite da relação também exige aceitar as entidades propostas nas pontas.")
+                body["knowledge_status"] = "accepted"; body["accepted_by"] = actor; body["refs"] = list(dict.fromkeys(body.get("refs", []) + [review["id"]]))
+                accepted.append(self.save("relation", actor, body, old["id"]))
+        return {"review": self.get(review["id"]), "accepted": [self.get(r["id"]) for r in accepted], "source_of_truth": "ledger"}
+
+    def context_metrics(self):
+        events = [json.loads(r["body"]) for r in self.db.execute("SELECT body FROM events ORDER BY seq") if json.loads(r["body"])["action"] == "context.retrieved"]
+        feedback = self.records("context_feedback")
+        def mean(values): return round(sum(values) / len(values), 3) if values else None
+        by_seq = {r["body"]["context_event_seq"]: r["body"] for r in feedback}
+        latencies = [e["data"]["retrieval_latency_ms"] for e in events]
+        chars = [e["data"]["context_chars"] for e in events]
+        tokens = [by_seq[e["seq"]]["harness_tokens"] for e in events if e["seq"] in by_seq and by_seq[e["seq"]].get("harness_tokens") is not None]
+        review_times = [r["body"]["reviewed_response_ms"] for r in feedback if r["body"].get("reviewed_response_ms") is not None]
+        precisions = [r["body"]["precision"] for r in feedback if r["body"].get("precision") is not None]
+        recalls = [r["body"]["recall"] for r in feedback if r["body"].get("recall") is not None]
+        return {"retrievals": len(events), "labeled_retrievals": len(feedback), "feedback_coverage": round(len(feedback) / len(events), 4) if events else None, "mean_precision": mean(precisions), "mean_recall": mean(recalls), "mean_retrieval_latency_ms": mean(latencies), "mean_context_chars": mean(chars), "mean_harness_tokens": mean(tokens), "mean_reviewed_response_ms": mean(review_times), "token_measurements": len(tokens), "quality_metrics_require_complete_human_labels": True, "targets_configured": False}
+
+    def export_graph(self, directory):
+        """Export a project-local Markdown graph suitable for Obsidian or any editor."""
+        target = Path(directory).resolve()
+        target.mkdir(parents=True, exist_ok=True)
+        entities = [r for r in self.records("entity") if r["body"].get("knowledge_status") == "accepted" and not self.stale(r)]
+        active = self._active_relations()
+        exported = []
+        source_ids = set()
+        adjacency = {}
+        for rel in active:
+            b = rel["body"]
+            adjacency.setdefault(b["subject"], []).append(rel)
+            adjacency.setdefault(b["object"], []).append(rel)
+            for ref in b.get("refs", []):
+                if self.get(ref)["kind"] in {"source", "evidence"}: source_ids.add(ref)
+        for entity in entities:
+            for ref in entity["body"].get("refs", []):
+                if self.get(ref)["kind"] in {"source", "evidence"}: source_ids.add(ref)
+        source_queue = list(source_ids)
+        while source_queue:
+            item = self.get(source_queue.pop())
+            if item["kind"] == "evidence":
+                for ref in item["body"].get("refs", []):
+                    if self.get(ref)["kind"] == "source" and ref not in source_ids:
+                        source_ids.add(ref); source_queue.append(ref)
+        for entity in entities:
+            ident, body = entity["id"], entity["body"]
+            relation_links = [f"- [[{rel['id']}|{rel['body']['certainty']} {rel['body']['predicate']}]]" for rel in adjacency.get(ident, [])]
+            source_links = [f"- [[{ref}|{self.get(ref)['body']['title']}]]" for ref in body.get("refs", []) if self.get(ref)["kind"] in {"source", "evidence"}]
+            text = [f"# {body['title']}", "", f"- ID: `{ident}`", f"- Tipo: `{body['entity_type']}`", f"- Versão/hash: `{entity['version']}` / `{entity['hash']}`", f"- Aliases: {', '.join(body.get('aliases', [])) or '—'}", "", "## Relações", *(relation_links or ["- Nenhuma relação ativa registrada."]), "", "## Origem", *(source_links or ["- Nenhuma origem direta registrada."]), ""]
+            (target / f"{ident}.md").write_text("\n".join(text), encoding="utf-8")
+            exported.append(ident)
+        for rel in active:
+            b = rel["body"]
+            subject, obj = self.get(b["subject"]), self.get(b["object"])
+            lines = [f"# {b['title']}", "", f"- ID: `{rel['id']}`", f"- Relation type: `{b['predicate']}`", f"- Certainty: `{b['certainty']}`", f"- Rationale: {b['rationale']}", f"- Hash: `{rel['hash']}`", "", "## Path", f"- [[{subject['id']}|{subject['body']['title']}]] → [[{obj['id']}|{obj['body']['title']}]]", "", "## Sources"]
+            origins = [ref for ref in b.get("refs", []) if self.get(ref)["kind"] in {"source", "evidence"}]
+            lines.extend([f"- [[{ref}|{self.get(ref)['body']['title']}]]" for ref in origins] or ["- None recorded."])
+            (target / f"{rel['id']}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+        for ident in sorted(source_ids):
+            source = self.get(ident)
+            body = source["body"]
+            lines = [f"# {body['title']}", "", f"- ID: `{ident}`", f"- Type: `{source['kind']}`", f"- Version/hash: `{source['version']}` / `{source['hash']}`", f"- Locator: {body.get('locator', '—')}", f"- Source type: {body.get('source_type', '—')}", f"- Content SHA-256: `{body.get('content_sha256', '')}`", ""]
+            if source["kind"] == "evidence": lines.extend(["## Observation", body.get("observation", ""), "", "## Limitations", body.get("limitations", ""), ""])
+            original_sources = [ref for ref in body.get("refs", []) if self.get(ref)["kind"] == "source"]
+            lines.extend(["## Original sources", *[f"- [[{ref}|{self.get(ref)['body']['title']}]]" for ref in original_sources], ""])
+            linked_entities = [e for e in entities if ident in e["body"].get("refs", [])]
+            linked_relations = [r for r in active if ident in r["body"].get("refs", [])]
+            lines.extend(["## Used by", *[f"- [[{e['id']}|{e['body']['title']}]]" for e in linked_entities], *[f"- [[{r['id']}|{r['body']['title']}]]" for r in linked_relations], ""])
+            (target / f"{ident}.md").write_text("\n".join(lines), encoding="utf-8")
+        index = [f"# Grafo de domínio — {self.meta['name']}", "", "Export derivado do ledger. Edite as fontes no CLI; alterações neste Markdown não atualizam o projeto.", "", "## Entidades", *[f"- [[{r['id']}|{r['body']['title']}]] — `{r['body']['entity_type']}`" for r in entities if r['id'] in exported], "", "## Fontes e evidências", *[f"- [[{i}|{self.get(i)['body']['title']}]]" for i in sorted(source_ids)], ""]
+        (target / "index.md").write_text("\n".join(index), encoding="utf-8")
+        return {"directory": str(target), "entities_exported": len(exported), "relations_exported": len(active), "sources_exported": len(source_ids), "source_of_truth": "project_ledger", "editable_import": False}
+
+    def ingest_proposals(self, actor, proposal):
+        """Validate and append agent-proposed entities/relations as ledger records."""
+        require(actor.strip() and isinstance(proposal, dict), "Ingestão exige actor e objeto JSON.")
+        entities = proposal.get("entities", [])
+        relations = proposal.get("relations", [])
+        require(isinstance(entities, list) and isinstance(relations, list) and (entities or relations), "Informe entities e/ou relations como listas.")
+        proposed_ids = [x.get("id") for x in entities + relations if isinstance(x, dict)]
+        require(len(proposed_ids) == len(entities) + len(relations) and all(isinstance(i, str) and re.fullmatch(r"[A-Za-z0-9_-]{1,90}", i) for i in proposed_ids), "Cada proposta exige ID válido.")
+        require(len(set(proposed_ids)) == len(proposed_ids), "IDs duplicados no lote.")
+        for ident in proposed_ids:
+            require(self.db.execute("SELECT 1 FROM records WHERE id=?", (ident,)).fetchone() is None, "Ingestão é append-only; ID já existe: " + ident)
+        proposed_entities = {x["id"] for x in entities}
+        known_entities = {r["id"] for r in self.records("entity")} | proposed_entities
+        with self.transaction():
+            for item in entities:
+                body = {k: v for k, v in item.items() if k != "id"}
+                require(body.get("title") and body.get("entity_type") in ENTITY_TYPES and isinstance(body.get("aliases", []), list), "Entidade exige title, entity_type e aliases válidos.")
+                body["knowledge_status"] = "proposed"
+                require(body.get("refs") and any(self.get(ref)["kind"] in {"source", "evidence"} for ref in body["refs"]), "Cada entidade exige fonte ou evidência já registrada.")
+                self.save("entity", actor, body, item["id"])
+            for item in relations:
+                body = {k: v for k, v in item.items() if k != "id"}
+                require(body.get("title") and body.get("predicate") in RELATION_TYPES and body.get("certainty") in {"confirmed", "possible"} and body.get("rationale"), "Relação exige title, predicate, certainty e rationale válidos.")
+                body["knowledge_status"] = "proposed"
+                require(body.get("subject") in known_entities and body.get("object") in known_entities and body["subject"] != body["object"], "Extremos da relação precisam existir ou estar no lote.")
+                if body.get("predicate") in {"replaces", "revokes"}:
+                    require(body.get("target_relation") in {r["id"] for r in self.records("relation")}, "target_relation precisa existir antes desta ingestão.")
+                    body["refs"] = list(body.get("refs", [])) + [body["target_relation"]]
+                body["refs"] = list(dict.fromkeys(body.get("refs", []) + [body["subject"], body["object"]]))
+                require(body.get("refs") and any(self.get(ref)["kind"] in {"source", "evidence"} for ref in body["refs"]), "Relação exige fonte original ou evidência rastreável.")
+                require(self.get(body["subject"])["kind"] == "entity" and self.get(body["object"])["kind"] == "entity", "Extremos precisam ser entidades registradas.")
+                if body["predicate"] in {"replaces", "revokes"}:
+                    require(body["certainty"] == "confirmed", "Substituição ou revogação exige certainty confirmed.")
+                self.save("relation", actor, body, item["id"])
+        return {"accepted": True, "append_only": True, "entities": [self.get(i) for i in [x["id"] for x in entities]], "relations": [self.get(i) for i in [x["id"] for x in relations]], "review_required_before_use": True}
+
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
@@ -419,6 +723,15 @@ def main(argv=None):
     p = sub.add_parser("dispatch"); p.add_argument("--task"); p.add_argument("--agent", required=True); p.add_argument("--refs", nargs="+", required=True); p.add_argument("--reason", required=True)
     p = sub.add_parser("complete"); p.add_argument("--task", required=True); p.add_argument("--actor", required=True); p.add_argument("--outputs", nargs="+", required=True)
     p = sub.add_parser("export-audit"); p.add_argument("--out", required=True)
+    p = sub.add_parser("search"); p.add_argument("query"); p.add_argument("--limit", type=int, default=10)
+    p = sub.add_parser("neighbors"); p.add_argument("id"); p.add_argument("--depth", type=int, default=1); p.add_argument("--confirmed-only", action="store_true")
+    p = sub.add_parser("impact"); p.add_argument("id"); p.add_argument("--confirmed-only", action="store_true")
+    p = sub.add_parser("context"); p.add_argument("query"); p.add_argument("--refs", nargs="*", default=[]); p.add_argument("--max-chars", type=int, default=12000); p.add_argument("--limit", type=int, default=12)
+    p = sub.add_parser("ingest"); p.add_argument("--actor", required=True); p.add_argument("--file", required=True)
+    p = sub.add_parser("export-graph"); p.add_argument("--dir", required=True)
+    p = sub.add_parser("context-feedback"); p.add_argument("--actor", required=True); p.add_argument("--event-seq", type=int, required=True); p.add_argument("--relevant-refs", nargs="*", default=[]); p.add_argument("--retrieved-relevant", nargs="*", default=[]); p.add_argument("--omitted-relevant", nargs="*", default=[]); p.add_argument("--irrelevant", nargs="*", default=[]); p.add_argument("--harness-tokens", type=int); p.add_argument("--reviewed-response-ms", type=int); p.add_argument("--rating", type=int)
+    p = sub.add_parser("context-accept"); p.add_argument("--actor", required=True); p.add_argument("--ids", nargs="+", required=True); p.add_argument("--rationale", required=True)
+    sub.add_parser("context-metrics")
     args = parser.parse_args(argv)
     try:
         if args.cmd == "init":
@@ -445,6 +758,15 @@ def main(argv=None):
                 out = Path(args.out)
                 out.write_text("\n".join(canonical(dict(e)) for e in project.db.execute("SELECT * FROM events ORDER BY seq")) + "\n", encoding="utf-8")
                 result["export"] = str(out.resolve())
+            elif args.cmd == "search": result = {"results": project.graph_search(args.query, args.limit)}
+            elif args.cmd == "neighbors": result = project.graph_neighbors(args.id, args.depth, not args.confirmed_only)
+            elif args.cmd == "impact": result = project.graph_impact(args.id, not args.confirmed_only)
+            elif args.cmd == "context": result = project.context_packet(args.query, args.refs, args.max_chars, args.limit)
+            elif args.cmd == "ingest": result = project.ingest_proposals(args.actor, load(args.file))
+            elif args.cmd == "export-graph": result = project.export_graph(args.dir)
+            elif args.cmd == "context-feedback": result = project.context_feedback(args.actor, args.event_seq, args.relevant_refs, args.retrieved_relevant, args.omitted_relevant, args.irrelevant, args.harness_tokens, args.reviewed_response_ms, args.rating)
+            elif args.cmd == "context-accept": result = project.context_accept(args.actor, args.ids, args.rationale)
+            elif args.cmd == "context-metrics": result = project.context_metrics()
         print(json.dumps(result, ensure_ascii=False, indent=2))
     except (Error, sqlite3.Error, OSError, ValueError) as exc:
         print(json.dumps({"error": str(exc)}, ensure_ascii=False), file=sys.stderr)

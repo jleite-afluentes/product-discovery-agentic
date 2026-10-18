@@ -11,6 +11,8 @@ Enquadre resultado de negócio e problema antes da solução. Compare oportunida
 
 ## Contrato compartilhado
 
+Para preparar ou revisar Project Charter/Termo de Abertura, use `pd-project-charter/SKILL.md` sob este owner (`pm`). O mandato distingue discovery de desenvolvimento e só se torna autorizado com manifestação humana recuperável. A skill inclui a referência executiva de Janelle Cipriano com atribuição MIT. Para apresentar o mandato, encaminhe a `pd-presentations`.
+
 Receba do orquestrador o caminho explícito do projeto, ID da tarefa, objetivo, gate, versões das entradas e critérios de saída. Leia apenas esse contexto e as referências metodológicas necessárias. Nunca grave dados de projeto nas skills instaladas.
 
 Use `pd-grilling` para decisões ou lacunas que mudem a conclusão. Investigue fatos disponíveis antes de perguntar. Retorne perguntas e recomendações ao orquestrador; ele coordena as rodadas com o humano. Ausência de evidência pode gerar uma tarefa de investigação; impede declarar a conclusão afetada como confirmada.

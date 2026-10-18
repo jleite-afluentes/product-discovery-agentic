@@ -13,6 +13,8 @@ Mantenha Markdown editável. Cada afirmação material aponta para registros de 
 
 ## Contrato compartilhado
 
+Project Charter é preparado pelo owner PM com `pd-project-charter`; esta skill cuida da derivação documental. Use Documents do ambiente para DOCX e a capacidade PDF quando solicitado, preserve fontes e status de autorização e revise a renderização. Não trate formatação como aprovação do patrocinador.
+
 Receba do orquestrador o caminho explícito do projeto, ID da tarefa, objetivo, gate, versões das entradas e critérios de saída. Leia apenas esse contexto e as referências metodológicas necessárias. Nunca grave dados de projeto nas skills instaladas.
 
 Use `pd-grilling` para decisões ou lacunas que mudem a conclusão. Investigue fatos disponíveis antes de perguntar. Retorne perguntas e recomendações ao orquestrador; ele coordena as rodadas com o humano. Ausência de evidência pode gerar uma tarefa de investigação; impede declarar a conclusão afetada como confirmada.

@@ -9,7 +9,7 @@ description: Produzir decks executivos e técnicos com vínculo entre slides e a
 
 Produza storyline antes da renderização. Executivo/comercial: contexto, problema, oportunidade, evidência, proposta, valor esperado, riscos, roadmap e decisões. Técnico: arquitetura e alternativas, jornadas, contratos, dados, integrações, requisitos, avaliação de IA, migração e aceite. Ajuste a extensão ao público.
 
-Cada slide terá título que comunica uma conclusão e referências aos IDs/versões no mapa de slides e nas notas quando possível. Números e promessas exigem fonte ou rótulo de hipótese. Use a skill de apresentações instalada para PPTX, inspecione a renderização e registre o arquivo e seu mapa como artefatos derivados. Sem ferramenta de renderização, entregue roteiro e declare exportação pendente, sem chamar Markdown de PowerPoint.
+Cada slide terá título que comunica uma conclusão e referências aos IDs/versões no mapa de slides e nas notas quando possível. Números e promessas exigem fonte ou rótulo de hipótese. Escolha o formato pelo pedido e consulte [entrega de apresentações](references/delivery.md) para os motores aprovados: Presentations para PPTX e Slidev para decks técnicos em Markdown/HTML. Carregue somente a skill e as referências do formato utilizado. Inspecione a renderização e registre o fonte, os exports e seu mapa como artefatos derivados. Sem ferramenta de renderização, entregue roteiro e declare exportação pendente, sem chamar Markdown de PowerPoint.
 
 ## Contrato compartilhado
 

@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/janellecipriano/pm-skills",
+  "commit": "d2891d28bc77fb7dbaa2278689b6cc18431ef833",
+  "skill_path": "skills/project-charter",
+  "license": "MIT",
+  "author": "Janelle Cipriano",
+  "use": "Preserved upstream skill and license; package-specific guidance lives in pd-* skills."
+}

@@ -2,14 +2,15 @@
 
 Pacote local de skills, agentes e runtime de estado para conduzir discovery e compor uma RFP rastreável para intake de uma squad agêntica. O Codex executa os agentes; o Laya propõe rotas; o Python mantém registros, versões e gates.
 
-Versão 0.2.1. O Laya recebe contexto estruturado e mantém despacho automático desativado enquanto o roteamento não tiver evidência suficiente. A auditoria registra probabilidades, margem, uso informado, modelo, revisão, contexto e tentativas. A política por tarefa sugere modelos/esforços do harness e limites de contexto, saída e tentativas; a disponibilidade é confirmada em cada harness. Gates G0–G6 exigem aprovação humana.
+Versão 0.4.0. Inclui Project Charter, Slidev e uma camada local de contexto/grafo derivada do ledger por projeto. O Laya mantém despacho automático desativado enquanto o roteamento não tiver evidência suficiente. Gates G0–G6 exigem aprovação humana.
 
 ## Conteúdo
 
-- 13 skills, incluindo orquestração, PM com contexto de IA, pesquisa, BA, UX, viabilidade, personas, revisão, RFP, documentação, decks, métodos e grilling.
+- 15 skills, incluindo orquestração, PM com contexto de IA, pesquisa, BA, UX, viabilidade, personas, revisão, RFP, documentação, decks, métodos, grilling, Project Charter e Slidev.
 - Perfis nativos de agentes e especialistas para o Codex, sem fixar modelo ou alterar suas configurações globais.
 - Avaliação de aplicabilidade das 100 técnicas, com gates, entradas, saídas, cuidados, personas e handoffs.
 - CLI de estado com SQLite por projeto, referências versionadas, snapshots de artefatos e cadeia de auditoria.
+- Grafo tipado reconstruível, busca lexical, navegação de relações/impactos, contexto JSON limitado, feedback de precisão/recall e export Markdown para Obsidian.
 - Instalador verificável e scripts para preparar o Laya isoladamente.
 - Política configurável de modelos e orçamento por tarefa, sem alterar o modelo global.
 - Seleção de contexto por evidências relevantes, com escalada explícita ao atingir limites.
@@ -28,6 +29,16 @@ O destino padrão das skills é `~/.agents/skills`; os agentes vão para `~/.cod
 O instalador verifica hashes e não copia projetos. Se encontrar um nome existente, para antes de substituir. `--upgrade` atualiza somente instalações gerenciadas sem edições locais. Não altera `config.toml`. Uma falha de disco pode deixar instalação parcial; reconcilie destinos gerenciados com `--upgrade`. Skills inteiras são substituídas atomicamente.
 
 Abra um novo turno após instalar. Invoque `$pd-orchestrator` e informe o caminho do projeto. O harness precisa disponibilizar ferramentas de subagentes para executar os perfis em instâncias distintas. Sem elas, a coordenação pode ocorrer sequencialmente, mas revisão independente fica pendente de outra sessão ou pessoa.
+
+## Project Charter e apresentações
+
+Para o Termo de Abertura, o PM usa `$pd-project-charter`. O documento distingue o recorte autorizado, evidências, propostas e pendências. A revisão e a autorização humana são registradas separadamente. A referência de Janelle Cipriano acompanha a skill com licença MIT; não é instalada como outra skill independente.
+
+`$pd-presentations` coordena narrativa, fontes e formato. Presentations do ambiente é o motor para PPTX; `$slidev`, incluída neste pacote sob MIT, atende a decks técnicos em Markdown/HTML. Carregue apenas as referências da modalidade utilizada. Documents do ambiente exporta o Charter para DOCX com revisão visual. Presentations e Documents são capacidades externas do harness e não são redistribuídas aqui.
+
+O instalador instala instruções e perfis, não o runtime Slidev. A criação/renderização de um deck exige Node e dependências locais do projeto, registradas em lockfile; PDF/PPTX também exigem navegador de exportação compatível. O export PPTX padrão do Slidev usa imagens; os limites do modo editável precisam ser conferidos na versão instalada. Veja `skills/pd-presentations/references/delivery.md`. Sem ferramenta de exportação, entregue fonte/roteiro e registre a exportação como pendente.
+
+O mecanismo de contexto recupera conteúdo e relações do projeto para fundamentar respostas de agentes (RAG lexical e orientado a grafo). O ledger continua sendo a fonte oficial; o grafo e o vault Markdown são índices/projeções reconstruíveis. Não usa embeddings e não é Microsoft GraphRAG. A avaliação de precisão/recall depende de rótulos relevantes registrados por revisores; sem rótulos não há alegação de qualidade. Consulte `skills/pd-orchestrator/references/cli.md`.
 
 ## Laya local
 

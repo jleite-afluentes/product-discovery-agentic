@@ -1,0 +1,4 @@
+interface:
+  display_name: "Termo de Abertura do Projeto"
+  short_description: "Charter rastreável com autorização humana"
+  default_prompt: "Use $pd-project-charter para preparar o Termo de Abertura do projeto indicado."
